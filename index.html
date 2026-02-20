@@ -16,7 +16,6 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -36,7 +35,7 @@
     >
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-          <div class="text-xl font-bold">Nunam</div>
+          <div class="text-xl font-bold">Nunam Rai</div>
           <div class="hidden md:flex space-x-8">
             <a
               href="#home"
@@ -116,21 +115,26 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="min-h-screen flex items-center justify-center relative"
+      class="min-h-screen flex items-center justify-center relative bg-gray-900"
     >
+      <!-- Background gradient -->
       <div
         class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"
       ></div>
-      <div class="relative z-10 text-center px-6 lg:px-8 max-w-5xl mx-auto">
+
+      <div class="relative z-10 text-center px-6 lg:px-8 max-w-4xl mx-auto">
+        <!-- Badge / Intro -->
         <div class="mb-6">
           <span
-            class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-gray-300"
+            class="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-gray-300 font-medium"
           >
             Web Developer • Graphic Designer • Freelancer
           </span>
         </div>
+
+        <!-- Main Heading -->
         <h1
-          class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight"
+          class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white"
         >
           Crafting Digital
           <span
@@ -138,34 +142,40 @@
           >
             Experiences
           </span>
-          <span class="block">& Visual Identities</span>
+          <span class="block text-gray-300"> & Visual Identities</span>
         </h1>
+
+        <!-- Description -->
         <p
-          class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+          class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          I build modern websites and powerful brand visuals that help
-          businesses grow and stand out in the digital world.
+          I build modern websites and brand visuals that help businesses grow,
+          stand out, and leave a lasting impression in the digital world.
         </p>
+
+        <!-- CTA Buttons -->
         <div
-          class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
         >
           <a
-            href="https://wa.me/977XXXXXXXXXX"
+            href="https://wa.me/9779816916916"
             target="_blank"
-            class="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            class="bg-white text-gray-900 px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105"
           >
             Chat on WhatsApp
           </a>
           <a
             href="#projects"
-            class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
+            class="border-2 border-white/30 text-white px-10 py-4 rounded-full font-semibold hover:bg-white/10 transition duration-300"
           >
             View Projects
           </a>
         </div>
-        <div class="animate-bounce">
+
+        <!-- Scroll Indicator -->
+        <div class="animate-bounce mt-4">
           <svg
-            class="w-6 h-6 mx-auto text-gray-400"
+            class="w-8 h-8 mx-auto text-gray-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -186,10 +196,12 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-8">About Nunam</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">
+              Know more about me?
+            </h2>
             <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
               <p>
-                I'm a passionate Laravel developer and creative designer who
+                I'm a passionate TALLstack developer and creative designer who
                 specializes in crafting digital experiences that drive results.
                 With expertise in modern web technologies and visual design, I
                 help businesses establish powerful online presence.
@@ -222,8 +234,12 @@
               >
               <span
                 class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm"
-                >UI/UX Design</span
+                >Alpine JS</span
               >
+              <span
+                class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm"
+                >Website Development
+              </span>
               <span
                 class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm"
                 >Branding</span
@@ -236,6 +252,14 @@
                 class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm"
                 >Graphic Design</span
               >
+              <span
+                class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm"
+                >Motion Design</span
+              >
+              <span
+                class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm"
+                >Video Editing
+              </span>
             </div>
           </div>
         </div>
@@ -299,7 +323,9 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4">UI/UX & Graphic Design</h3>
+            <h3 class="text-2xl font-bold mb-4">
+              Graphic Design & Video Editing
+            </h3>
             <p class="text-gray-400 leading-relaxed">
               Stunning visual identities, user interfaces, and graphic designs
               that capture attention and communicate your brand message
@@ -341,7 +367,7 @@
     <section id="brands" class="py-24 bg-gray-900/30">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
             Brands I Work With
           </h2>
           <p class="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -352,39 +378,143 @@
           <div class="brands-scroll flex gap-8">
             <!-- Brand 1 -->
             <div
-              class="flex-shrink-0 w-40 h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
             >
-              <span class="text-gray-400 font-semibold">Brand Name</span>
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/597173682_1302892891865857_6300191016222292447_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeEW5yN8ISUsXk612gFMZSnuKCxCKXuvKFkoLEIpe68oWcbJ0AJztpEEmwqgO2rwyVxZV8EBe0xabTsrI5WCB7b_&_nc_ohc=8ueLWujoIhwQ7kNvwGEToYD&_nc_oc=Adl6FfCizAXxpsvfUIxJ_1sMwBu6AQayabCKCpxJI5dSOLjlBqtza0VAGa2UKVupHZRJGmEAgvv634aNsUIHoeh6&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=20GzhOzoLRf8lvsefZpu4A&oh=00_AfsisEqx_esncJL5FGMwop_pKpfLZc2hasR-42dqmhPSog&oe=699E55F7"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-cover"
+              />
             </div>
             <!-- Brand 2 -->
             <div
-              class="flex-shrink-0 w-40 h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
             >
-              <span class="text-gray-400 font-semibold">Brand Name</span>
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/586777590_1304331858388951_6020902671457373791_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeFvYcVDK4PnX_iQZ9sNAQzwz8l1OvmvFGTPyXU6-a8UZB5m-w8YPS9uiokgL5BlRmI0fMieebzlIORc2vIqxJLm&_nc_ohc=LasV2vaJhW4Q7kNvwG96JTU&_nc_oc=AdnMk6JXX6MY_Cauxp9lKHOpfEJ19yDYna8ikOJCrIp_VN8k6D3pw--q7MbJZA0kIPMi9xN4gzQYeXNLRRpwqMKk&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=600r51BY5jY9VZFswNk8cA&oh=00_AfsuB37RJvfmrzuydloGk4G0xWReetQTGp33x76XC9j-LQ&oe=699E55AC"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
             </div>
             <!-- Brand 3 -->
             <div
-              class="flex-shrink-0 w-40 h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
             >
-              <span class="text-gray-400 font-semibold">Brand Name</span>
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/596581140_122112950517070627_8156235010120886926_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeEngUPRh0v_gJYRwvMC7y5El92W2icu4oGX3ZbaJy7igUCUHUkFO5CdNP6d6IwUMlgViy0dWD7QClZp0Q9wDtRB&_nc_ohc=hlEOLNFA-jgQ7kNvwGm-Brn&_nc_oc=AdmmKOmLlkbjcQMMbc2oBm5_QEr0Rgl0omj-g_5v6L2T7bdtVjfK2bwIYLIpbeFNjUjU-OWT6DM637KszYJ7qUqC&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=yvCREIB3eYWx4OKK6c1pLQ&oh=00_AfukFwanSFRwF0rf3o_82aKzyLNrpQhSZXU7FoWpFFO7Ag&oe=699E7FAF"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
             </div>
             <!-- Brand 4 -->
             <div
-              class="flex-shrink-0 w-40 h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
             >
-              <span class="text-gray-400 font-semibold">Brand Name</span>
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/596861411_801176556250423_1449901182182617447_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeFHgliMUP8FjalC2efzLXizC04BVyE1W_0LTgFXITVb_cMAl9UXURePi2YaWAtenGxJ880fr6ITUzvWgj-aTp5n&_nc_ohc=ZtSiqX-3U3cQ7kNvwHhXQII&_nc_oc=Adk5bu9x_BB16d8QSmturmCWc5H_dYS5cTElrbvYyB47Pjyeevi8cUFOM2GTTChKzSXmy8XYsUUEV1pGF2TRXo9V&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=JMWDHbggv1LQzl9iSs0J8w&oh=00_AfvIyJSlfo1hbnpwD0XGhsaZOOkp6KCiqSdNmCySh1FUmQ&oe=699E643E"
+                alt="Brand 1 Logo"
+                class="rounded shadow-md h-full w-full object-contain"
+              />
             </div>
             <!-- Brand 5 -->
             <div
-              class="flex-shrink-0 w-40 h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
             >
-              <span class="text-gray-400 font-semibold">Brand Name</span>
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/595378764_1437747451688539_6032907128995272786_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeFQU4Vu0t18Y6JD8meeetv3I3y1jlHV1UojfLWOUdXVShMDAUHtex8Z35hqqm3Jp82PsJFb7Bu3e5z8X3AERz-w&_nc_ohc=0VtH31rzI9IQ7kNvwErixj_&_nc_oc=AdlgX3IEhswbolVjAPfGyiJQU1g_b_gNcNK2ys-j6mFXZCiyKy_jtKTp1e2PniE6_zsP4JMXdvckx0ugG8iSDlgi&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=tvkHUv2ZiCbuTRY4-MY9Ig&oh=00_AfubGW-drq4jZq7b97-ek2ZjfN7WZhmv3uyT30Ld5wHUig&oe=699E57AD"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
             </div>
             <!-- Brand 6 -->
             <div
-              class="flex-shrink-0 w-40 h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
             >
-              <span class="text-gray-400 font-semibold">Brand Name</span>
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/608897617_1299605302185984_264470924715292043_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeH5FAZoRbhLrFaVJiiIvMepSfCLxWwP7OFJ8IvFbA_s4ciJVdNSeJELMUEPSOJs2zUFKVl6I46Fhc27fl0BYteq&_nc_ohc=0wGm8_8Wdl8Q7kNvwGGJiR0&_nc_oc=AdleoxR4zLD7H47DJsr5Ie9Ij26vaFqFUNBfvOl9zra3fpDfGWtVL-hfD_DZe71QlARPJrx2g93_28Eymur2eS9Z&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=xQe37NkK1mDrV7n1jh28rg&oh=00_AfsmbgtlApBODDw-msPGUcAsGfzTA_tEAoYjZlwvelQxvw&oe=699E8666"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/596592549_1462215852357634_6518907281057379945_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHmsJScLMiNaj5N5Mu28SxrDgFD13twohUOAUPXe3CiFdFypT1j-SwCU_Vf-KYXSP9PhbKGKPnLCRDoAQMCffSa&_nc_ohc=wt9l57ZpQMQQ7kNvwHhasdt&_nc_oc=AdnMbMXEqaOraaqYm_YcgV3oO5_F_NZDcuZnC-dsspcfIUjfSY6y1aBxXAOJKEV4U88scF_QioCbtUeQC9JRk_tJ&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=lFr6AZDaNzVGHpDpGfhrgw&oh=00_AfuDiAAO-k_imo5UlObEkdMEu0hnVIU6QzYQL8ey_5884A&oe=699E69BD"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/614563124_1369865385151130_2499251190607613008_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHMCERJ5tEAzZCqJN6bPUgeO2ny2Hg6_tM7afLYeDr-01aPPISpWXmPpEvVk8KD_y_JS9N3ns8YMzDXlEGg4RuI&_nc_ohc=iqAlXB9WvnoQ7kNvwFbCzyH&_nc_oc=AdlYk4tdj7b0E_kfd3AhKLpFN5FH34gvCwhne-GxziWzzWnvBOCpt8eV_X_IfcnpKELvy9db1c2neh5l0TXNqI8f&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=_Fcv3OZhFii-lzELomS2iw&oh=00_Afvaw3wtFLbf7dqM7jgkpV7g-r6aj_J0lPeBVMyVsr2D6g&oe=699E7EB2"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src=""
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src="https://media-del3-1.cdn.whatsapp.net/v/t61.24694-24/625682670_1430541678581627_7830349281402024807_n.jpg?ccb=11-4&oh=01_Q5Aa3wEGDJcN3wVFi-fqxC4s6ZiXfD6JchgCyzrg4QEDLAc-gA&oe=69A4F4C2&_nc_sid=5e03e0&_nc_cat=111"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/596811257_1419267830204365_8034967011161299379_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeG0g8boHwqtl7PLhFjwO43SU4k9U_JBcthTiT1T8kFy2AQcvWOYOaXzCq9Ds82mZ8UcBRTpIR4HxORaLL0txTIB&_nc_ohc=MZbitD5jEPIQ7kNvwF9htF3&_nc_oc=AdlsW0GCbmm1TiTBe4wDME2WADRCUQRL9ceNa9kz7VFctvAJ60GCzs4JE2iQ9EJh0pB8_l20fe75baemNKgKRto5&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=v0i2ZGRM9MD3hyU5dj7Jow&oh=00_AftSYRuOXOmnYtt66RsAUFJXx6BVVCTB23nBbxzTejzzew&oe=699E6168"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/608897617_1299605302185984_264470924715292043_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeH5FAZoRbhLrFaVJiiIvMepSfCLxWwP7OFJ8IvFbA_s4ciJVdNSeJELMUEPSOJs2zUFKVl6I46Fhc27fl0BYteq&_nc_ohc=0wGm8_8Wdl8Q7kNvwGGJiR0&_nc_oc=AdleoxR4zLD7H47DJsr5Ie9Ij26vaFqFUNBfvOl9zra3fpDfGWtVL-hfD_DZe71QlARPJrx2g93_28Eymur2eS9Z&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=xQe37NkK1mDrV7n1jh28rg&oh=00_AfsmbgtlApBODDw-msPGUcAsGfzTA_tEAoYjZlwvelQxvw&oe=699E8666"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/608897617_1299605302185984_264470924715292043_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeH5FAZoRbhLrFaVJiiIvMepSfCLxWwP7OFJ8IvFbA_s4ciJVdNSeJELMUEPSOJs2zUFKVl6I46Fhc27fl0BYteq&_nc_ohc=0wGm8_8Wdl8Q7kNvwGGJiR0&_nc_oc=AdleoxR4zLD7H47DJsr5Ie9Ij26vaFqFUNBfvOl9zra3fpDfGWtVL-hfD_DZe71QlARPJrx2g93_28Eymur2eS9Z&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=xQe37NkK1mDrV7n1jh28rg&oh=00_AfsmbgtlApBODDw-msPGUcAsGfzTA_tEAoYjZlwvelQxvw&oe=699E8666"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
+            </div>
+
+            <div
+              class="flex-shrink-0 w-40 h-40 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+            >
+              <img
+                src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/608897617_1299605302185984_264470924715292043_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeH5FAZoRbhLrFaVJiiIvMepSfCLxWwP7OFJ8IvFbA_s4ciJVdNSeJELMUEPSOJs2zUFKVl6I46Fhc27fl0BYteq&_nc_ohc=0wGm8_8Wdl8Q7kNvwGGJiR0&_nc_oc=AdleoxR4zLD7H47DJsr5Ie9Ij26vaFqFUNBfvOl9zra3fpDfGWtVL-hfD_DZe71QlARPJrx2g93_28Eymur2eS9Z&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=xQe37NkK1mDrV7n1jh28rg&oh=00_AfsmbgtlApBODDw-msPGUcAsGfzTA_tEAoYjZlwvelQxvw&oe=699E8666"
+                alt="Brand 1 Logo"
+                class="rounded-md shadow-md h-full w-full object-contain"
+              />
             </div>
           </div>
         </div>
@@ -392,211 +522,66 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-black">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <!-- Websites Section -->
-        <div class="mb-20">
-          <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Websites</h2>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-              Modern web projects built with cutting-edge technologies
-            </p>
-          </div>
-          <div class="relative overflow-hidden">
-            <div class="websites-scroll flex gap-6">
-              <!-- Website Project 1 -->
-              <div class="flex-shrink-0 w-80 mx-2">
-                <div
-                  class="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col"
-                >
-                  <div
-                    class="w-full h-40 bg-white/5 flex items-center justify-center"
-                  >
-                    <div class="text-6xl font-bold text-white/20">LOGO</div>
-                  </div>
-                  <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold mb-2">Project Title</h3>
-                    <p class="text-gray-400 text-sm mb-4 flex-grow">
-                      Brief description of the website project, technologies
-                      used, and key features.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors"
-                    >
-                      Visit Website →
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Website Project 2 -->
-              <div class="flex-shrink-0 w-80 mx-2">
-                <div
-                  class="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col"
-                >
-                  <div
-                    class="w-full h-40 bg-white/5 flex items-center justify-center"
-                  >
-                    <div class="text-6xl font-bold text-white/20">LOGO</div>
-                  </div>
-                  <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold mb-2">Project Title</h3>
-                    <p class="text-gray-400 text-sm mb-4 flex-grow">
-                      Brief description of the website project, technologies
-                      used, and key features.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors"
-                    >
-                      Visit Website →
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Website Project 3 -->
-              <div class="flex-shrink-0 w-80 mx-2">
-                <div
-                  class="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col"
-                >
-                  <div
-                    class="w-full h-40 bg-white/5 flex items-center justify-center"
-                  >
-                    <div class="text-6xl font-bold text-white/20">LOGO</div>
-                  </div>
-                  <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold mb-2">Project Title</h3>
-                    <p class="text-gray-400 text-sm mb-4 flex-grow">
-                      Brief description of the website project, technologies
-                      used, and key features.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors"
-                    >
-                      Visit Website →
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section
+      id="projects"
+      class="py-24 bg-black flex items-center justify-center"
+    >
+      <div class="text-center">
+        <div class="mb-6">
+          <svg
+            class="w-16 h-16 mx-auto text-gray-500 animate-spin-slow"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke-width="4"
+              stroke-dasharray="31.4 31.4"
+              stroke-linecap="round"
+            ></circle>
+          </svg>
         </div>
-
-        <!-- Graphic Designs Section -->
-        <div>
-          <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Graphic Designs</h2>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-              Creative visual designs and branding solutions
-            </p>
-          </div>
-          <div class="relative overflow-hidden">
-            <div class="designs-scroll flex gap-6">
-              <!-- Design Project 1 -->
-              <div class="flex-shrink-0 w-80 mx-2">
-                <div
-                  class="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col"
-                >
-                  <div
-                    class="w-full h-48 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center"
-                  >
-                    <div class="text-6xl font-bold text-white/20">DESIGN</div>
-                  </div>
-                  <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold mb-2">Design Title</h3>
-                    <p class="text-gray-400 text-sm mb-4 flex-grow">
-                      Description of the graphic design, branding elements, and
-                      creative approach.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="text-pink-400 hover:text-pink-300 font-semibold text-sm transition-colors"
-                    >
-                      View on Facebook →
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Design Project 2 -->
-              <div class="flex-shrink-0 w-80 mx-2">
-                <div
-                  class="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col"
-                >
-                  <div
-                    class="w-full h-48 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center"
-                  >
-                    <div class="text-6xl font-bold text-white/20">DESIGN</div>
-                  </div>
-                  <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold mb-2">Design Title</h3>
-                    <p class="text-gray-400 text-sm mb-4 flex-grow">
-                      Description of the graphic design, branding elements, and
-                      creative approach.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="text-pink-400 hover:text-pink-300 font-semibold text-sm transition-colors"
-                    >
-                      View on Facebook →
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Design Project 3 -->
-              <div class="flex-shrink-0 w-80 mx-2">
-                <div
-                  class="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col"
-                >
-                  <div
-                    class="w-full h-48 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center"
-                  >
-                    <div class="text-6xl font-bold text-white/20">DESIGN</div>
-                  </div>
-                  <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold mb-2">Design Title</h3>
-                    <p class="text-gray-400 text-sm mb-4 flex-grow">
-                      Description of the graphic design, branding elements, and
-                      creative approach.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="text-pink-400 hover:text-pink-300 font-semibold text-sm transition-colors"
-                    >
-                      View on Facebook →
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Projects Coming Soon
+        </h2>
+        <p class="text-gray-400 text-lg md:text-xl animate-pulse">
+          Stay tuned! Exciting work is on the way.
+        </p>
       </div>
     </section>
 
+    <style>
+      /* Slow spin animation for the circle */
+      .animate-spin-slow {
+        animation: spin 4s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-black">
+    <section id="contact" class="py-24 bg-gray-900">
       <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">Get In Touch</h2>
-        <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
-          Have a project in mind? Let's discuss how we can work together to
-          bring your vision to life.
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">
+          Let's Work Together
+        </h2>
+        <p class="text-gray-400 mb-12 text-lg md:text-xl max-w-2xl mx-auto">
+          Have a project in mind? Reach out on WhatsApp and let's bring your
+          ideas to life.
         </p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <div class="flex justify-center">
           <a
             href="https://wa.me/9779816916916"
             target="_blank"
-            class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
+            class="bg-white text-gray-900 px-12 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-3"
           >
             WhatsApp Now
           </a>
@@ -708,6 +693,22 @@
           });
         });
       });
+    </script>
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+    <script>
+      if (!window.lenis) {
+        window.lenis = new Lenis({
+          smooth: true,
+        });
+
+        function raf(time) {
+          window.lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+      }
     </script>
   </body>
 </html>
