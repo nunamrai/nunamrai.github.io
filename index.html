@@ -3,17 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nunam | Creative Developer & Designer</title>
+
+    <!-- ═══ PRIMARY SEO META TAGS ═══ -->
+    <title>Nunam Rai | Creative Developer & Designer — Nepal</title>
+    <meta
+      name="description"
+      content="Nunam Rai is an independent creative developer and designer based in Nepal, specializing in TALL Stack web development, branding, video production, and digital marketing for growing brands."
+    />
+    <meta
+      name="keywords"
+      content="Nunam Rai, web developer Nepal, TALL stack developer, Laravel developer Nepal, branding designer Nepal, digital marketing Nepal, Filament PHP, SEO Nepal, freelancer Nepal"
+    />
+    <meta name="author" content="Nunam Rai" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nunamrai.com/" />
+
+    <!-- ═══ OPEN GRAPH (Facebook / LinkedIn) ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nunamrai.com/" />
+    <meta
+      property="og:title"
+      content="Nunam Rai | Creative Developer & Designer — Nepal"
+    />
+    <meta
+      property="og:description"
+      content="Independent Developer & Designer specializing in the TALL Stack and Premium Visual Identities. Based in Nepal, open for projects worldwide."
+    />
+    <meta property="og:image" content="https://nunamrai.com/img/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Nunam Rai" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://nunamrai.com/" />
+    <meta
+      name="twitter:title"
+      content="Nunam Rai | Creative Developer & Designer — Nepal"
+    />
+    <meta
+      name="twitter:description"
+      content="Independent Developer & Designer specializing in the TALL Stack and Premium Visual Identities."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nunamrai.com/img/og-cover.jpg"
+    />
+
+    <!-- ═══ SCHEMA.ORG STRUCTURED DATA ═══ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nunam Rai",
+        "url": "https://nunamrai.com",
+        "sameAs": [
+          "https://github.com/nunamrai/",
+          "https://www.behance.net/bobstudioo",
+          "http://instagram.com/bobstudio_official",
+          "https://www.facebook.com/bobstudioo/"
+        ],
+        "jobTitle": "Creative Developer & Designer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Bob Studio"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NP"
+        },
+        "description": "Independent Developer & Designer specializing in TALL Stack development, branding, and digital marketing.",
+        "knowsAbout": [
+          "Laravel",
+          "Filament PHP",
+          "Livewire",
+          "Alpine.js",
+          "Tailwind CSS",
+          "SEO",
+          "Branding",
+          "Digital Marketing"
+        ]
+      }
+    </script>
+
+    <!-- ═══ FONTS ═══ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- ═══ SCRIPTS ═══ -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -25,8 +112,8 @@
               card: "#0f0f0f",
             },
             animation: {
-              marquee: "marquee 30s linear infinite",
-              marquee2: "marquee2 30s linear infinite",
+              marquee: "marquee 50s linear infinite",
+              marquee2: "marquee2 50s linear infinite",
             },
             keyframes: {
               marquee: {
@@ -42,6 +129,7 @@
         },
       };
     </script>
+
     <style>
       html.lenis,
       html.lenis body {
@@ -56,6 +144,7 @@
       .lenis.lenis-stopped {
         overflow: hidden;
       }
+
       .text-gradient {
         background: linear-gradient(135deg, #fff 30%, #a855f7 100%);
         -webkit-background-clip: text;
@@ -68,48 +157,178 @@
           rgba(5, 5, 5, 0) 70%
         );
       }
+
+      /* Glassmorphism nav */
+      .nav-glass {
+        background: rgba(5, 5, 5, 0.6);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
       /* Pause marquee on hover */
       .group:hover .animate-marquee,
       .group:hover .animate-marquee2 {
         animation-play-state: paused;
       }
+
+      /* Mobile menu */
+      #mobile-menu {
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+      }
+      #mobile-menu.hidden {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+      }
+      #mobile-menu:not(.hidden) {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Hamburger animation */
+      .ham-line {
+        transition: all 0.3s ease;
+        transform-origin: center;
+      }
+      .ham-open .ham-top {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .ham-open .ham-mid {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .ham-open .ham-bot {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      /* Skills mobile padding fix */
+      @media (max-width: 768px) {
+        #skills .grid > div {
+          padding: 1.75rem;
+        }
+        #skills .grid > div ul li {
+          padding-bottom: 0.5rem;
+        }
+      }
     </style>
   </head>
+
   <body
     class="bg-darker text-white font-sans selection:bg-accent selection:text-white"
   >
-    <nav
-      class="fixed top-0 w-full z-[100] bg-darker/80 backdrop-blur-xl border-b border-white/5"
-    >
+    <!-- ═══════════════════════════════════════════
+         NAVIGATION
+    ═══════════════════════════════════════════ -->
+    <nav class="fixed top-0 w-full z-[100] nav-glass">
       <div
         class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center"
       >
-        <div class="text-xl font-bold tracking-tighter uppercase">
+        <!-- Logo -->
+        <a href="#home" class="text-xl font-bold tracking-tighter uppercase">
           Nunam<span class="text-accent">Rai.</span>
-        </div>
+        </a>
+
+        <!-- Desktop Links -->
         <div
-          class="hidden md:flex items-center space-x-10 text-[11px] font-bold tracking-[0.2em]"
+          class="hidden md:flex items-center space-x-8 text-[10px] font-bold tracking-[0.18em]"
         >
-          <a href="#home" class="hover:text-accent transition-colors">HOME</a>
-          <a href="#about" class="hover:text-accent transition-colors">ABOUT</a>
+          <a href="#home" class="hover:text-accent transition-colors"
+            >THE VIBE</a
+          >
+          <a href="#about" class="hover:text-accent transition-colors"
+            >MY STORY</a
+          >
           <a href="#projects" class="hover:text-accent transition-colors"
-            >PROJECTS</a
+            >THE WORK</a
           >
           <a href="#skills" class="hover:text-accent transition-colors"
-            >SKILLS</a
+            >MY ARSENAL</a
           >
           <a href="#services" class="hover:text-accent transition-colors"
-            >SERVICES</a
+            >WHAT I DO</a
+          >
+          <a href="#pricing" class="hover:text-accent transition-colors"
+            >THE RATES</a
           >
           <a
             href="https://wa.me/9779816916916"
             class="px-6 py-2 bg-white text-black rounded-full hover:bg-accent hover:text-white transition-all"
-            >CONTACT</a
+            >LET'S TALK</a
           >
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button
+          id="hamburger"
+          aria-label="Open mobile menu"
+          class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] focus:outline-none"
+        >
+          <span
+            class="ham-line ham-top block w-6 h-[2px] bg-white rounded-full"
+          ></span>
+          <span
+            class="ham-line ham-mid block w-6 h-[2px] bg-white rounded-full"
+          ></span>
+          <span
+            class="ham-line ham-bot block w-6 h-[2px] bg-white rounded-full"
+          ></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full nav-glass border-t border-white/5 px-6 pt-6 pb-8"
+      >
+        <div
+          class="flex flex-col space-y-5 text-[13px] font-bold tracking-[0.2em] uppercase"
+        >
+          <a
+            href="#home"
+            class="mobile-nav-link hover:text-accent transition-colors py-1"
+            >The Vibe</a
+          >
+          <a
+            href="#about"
+            class="mobile-nav-link hover:text-accent transition-colors py-1"
+            >My Story</a
+          >
+          <a
+            href="#projects"
+            class="mobile-nav-link hover:text-accent transition-colors py-1"
+            >The Work</a
+          >
+          <a
+            href="#skills"
+            class="mobile-nav-link hover:text-accent transition-colors py-1"
+            >My Arsenal</a
+          >
+          <a
+            href="#services"
+            class="mobile-nav-link hover:text-accent transition-colors py-1"
+            >What I Do</a
+          >
+          <a
+            href="#pricing"
+            class="mobile-nav-link hover:text-accent transition-colors py-1"
+            >The Rates</a
+          >
+          <a
+            href="https://wa.me/9779816916916"
+            class="mt-2 inline-block px-8 py-3 bg-accent text-white rounded-full text-center hover:bg-purple-600 transition-all w-full text-center"
+          >
+            Let's Talk
+          </a>
         </div>
       </div>
     </nav>
 
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
     <section
       id="home"
       class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 pb-20 overflow-hidden"
@@ -153,80 +372,65 @@
       </div>
     </section>
 
-    <!-- <section id="about" class="py-32 relative overflow-hidden">
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
+    <section id="about" class="py-32 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="relative group">
+            <div
+              class="absolute -inset-4 bg-accent/20 rounded-2xl blur-xl group-hover:bg-accent/30 transition duration-500"
+            ></div>
+            <div
+              class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-gray-800 border border-white/10"
+            >
+              <img
+                src="./img/wife&me&furry (1).jpg"
+                alt="Nunam Rai with his wife and dogs — creative developer and designer based in Nepal"
+                class="object-cover w-full h-full grayscale hover:grayscale-0 transition duration-700 ease-in-out"
+                loading="lazy"
+                width="800"
+                height="1000"
+              />
+            </div>
+          </div>
           <div>
             <h2
               class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4"
             >
               The Story So Far
             </h2>
-            <h3 class="text-4xl md:text-6xl font-bold tracking-tighter mb-8">
+            <h3 class="text-4xl md:text-5xl font-bold tracking-tighter mb-8">
               BEYOND THE <br /><span class="italic text-gray-500"
                 >PIXELS & CODE.</span
               >
             </h3>
-          </div>
-          <div class="space-y-6">
-            <p class="text-xl text-gray-300 leading-relaxed">
-              I’ve been building a life that balances high-end tech with the
-              things that truly matter.
-            </p>
-            <p class="text-gray-400 leading-relaxed">
-              When I'm not architecting digital solutions, I'm at home being a
-              proud husband and surrounded by my dogs—the best co-workers a dev
-              could ask for.
-            </p>
-            <p
-              class="text-gray-400 leading-relaxed text-lg italic border-l-2 border-accent pl-6"
-            >
-              "Helping brands shine isn't just a job; it's about bringing a
-              touch of soul to the digital space."
-            </p>
+            <div class="space-y-6">
+              <p class="text-xl text-gray-300 leading-relaxed">
+                I've been incredibly lucky to build a life that balances
+                high-end tech with the things that truly matter.
+              </p>
+              <p class="text-gray-400 leading-relaxed">
+                When I'm not architecting digital solutions, I'm surrounded by
+                my beautiful wife and a pack of furry friends — honestly, the
+                best co-workers a dev could ask for.
+              </p>
+              <p
+                class="text-gray-400 leading-relaxed text-lg italic border-l-2 border-accent pl-6"
+              >
+                "Helping brands shine isn't just a job; it's about bringing a
+                touch of soul to the digital space."
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <section id="about" class="py-32 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="relative group">
-        <div class="absolute -inset-4 bg-accent/20 rounded-2xl blur-xl group-hover:bg-accent/30 transition duration-500"></div>
-        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-gray-800 border border-white/10">
-          <img 
-            src="./img/wife&me&furry (1).jpg" 
-            alt="Your Name" 
-            class="object-cover w-full h-full grayscale hover:grayscale-0 transition duration-700 ease-in-out"
-          />
-        </div>
-      </div>
-
-      <div>
-        <h2 class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4">
-          The Story So Far
-        </h2>
-        <h3 class="text-4xl md:text-5xl font-bold tracking-tighter mb-8">
-          BEYOND THE <br /><span class="italic text-gray-500">PIXELS & CODE.</span>
-        </h3>
-        
-        <div class="space-y-6">
-  <p class="text-xl text-gray-300 leading-relaxed">
-    I’ve been incredibly lucky to build a life that balances high-end tech with the things that truly matter.
-  </p>
-  <p class="text-gray-400 leading-relaxed">
-    When I'm not architecting digital solutions, I’m surrounded by my beautiful wife and a pack of furry friends—honestly, the best co-workers a dev could ask for.
-  </p>
-  <p class="text-gray-400 leading-relaxed text-lg italic border-l-2 border-accent pl-6">
-    "Helping brands shine isn't just a job; it's about bringing a touch of soul to the digital space."
-  </p>
-</div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    <!-- ═══════════════════════════════════════════
+         MARQUEE (client ticker) — slower for readability
+    ═══════════════════════════════════════════ -->
     <section
       class="py-20 border-y border-white/5 bg-white/[0.02] overflow-hidden"
     >
@@ -269,7 +473,6 @@
             >HimalFoodStore</span
           >
         </div>
-
         <div
           class="absolute top-0 flex animate-marquee2 whitespace-nowrap items-center py-4"
         >
@@ -313,6 +516,9 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════════ -->
     <section
       id="skills"
       class="py-32 relative border-t border-white/5 bg-darker"
@@ -340,21 +546,21 @@
         <div
           class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden"
         >
+          <!-- Development -->
           <div
-            class="bg-darker p-10 hover:bg-white/[0.03] transition-all group"
+            class="bg-darker p-6 md:p-10 hover:bg-white/[0.03] transition-all group"
           >
-            <div class="mb-10">
+            <div class="mb-8 md:mb-10">
               <span
                 class="text-[10px] font-black tracking-[0.4em] uppercase border border-accent/30 text-accent px-4 py-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-all"
+                >Development</span
               >
-                Development
-              </span>
             </div>
-            <ul class="space-y-6">
+            <ul class="space-y-4 md:space-y-6">
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Laravel / PHP</span>
+                <span class="text-base md:text-lg">Laravel / PHP</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Backend</span
                 >
@@ -362,7 +568,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Filament PHP</span>
+                <span class="text-base md:text-lg">Filament PHP</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Admin / ERP</span
                 >
@@ -370,7 +576,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Livewire</span>
+                <span class="text-base md:text-lg">Livewire</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Reactive</span
                 >
@@ -378,7 +584,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Alpine JS</span>
+                <span class="text-base md:text-lg">Alpine JS</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Frontend</span
                 >
@@ -386,7 +592,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Tailwind CSS</span>
+                <span class="text-base md:text-lg">Tailwind CSS</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Design</span
                 >
@@ -394,21 +600,21 @@
             </ul>
           </div>
 
+          <!-- Creative -->
           <div
-            class="bg-darker p-10 hover:bg-white/[0.03] transition-all group"
+            class="bg-darker p-6 md:p-10 hover:bg-white/[0.03] transition-all group"
           >
-            <div class="mb-10">
+            <div class="mb-8 md:mb-10">
               <span
                 class="text-[10px] font-black tracking-[0.4em] uppercase border border-accent/30 text-accent px-4 py-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-all"
+                >Creative</span
               >
-                Creative
-              </span>
             </div>
-            <ul class="space-y-6">
+            <ul class="space-y-4 md:space-y-6">
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Figma / XD</span>
+                <span class="text-base md:text-lg">Figma / XD</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >UI/UX</span
                 >
@@ -416,7 +622,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Adobe Illustrator</span>
+                <span class="text-base md:text-lg">Adobe Illustrator</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Branding</span
                 >
@@ -424,7 +630,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Premiere Pro</span>
+                <span class="text-base md:text-lg">Premiere Pro</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Video</span
                 >
@@ -432,7 +638,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">After Effects</span>
+                <span class="text-base md:text-lg">After Effects</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Motion</span
                 >
@@ -440,7 +646,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Photoshop</span>
+                <span class="text-base md:text-lg">Photoshop</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Visuals</span
                 >
@@ -448,21 +654,21 @@
             </ul>
           </div>
 
+          <!-- Growth -->
           <div
-            class="bg-darker p-10 hover:bg-white/[0.03] transition-all group"
+            class="bg-darker p-6 md:p-10 hover:bg-white/[0.03] transition-all group"
           >
-            <div class="mb-10">
+            <div class="mb-8 md:mb-10">
               <span
                 class="text-[10px] font-black tracking-[0.4em] uppercase border border-accent/30 text-accent px-4 py-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-all"
+                >Growth</span
               >
-                Growth
-              </span>
             </div>
-            <ul class="space-y-6">
+            <ul class="space-y-4 md:space-y-6">
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Meta & Google Ads</span>
+                <span class="text-base md:text-lg">Meta & Google Ads</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Ads Run</span
                 >
@@ -470,7 +676,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">SEO Architecture</span>
+                <span class="text-base md:text-lg">SEO Architecture</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Search</span
                 >
@@ -478,7 +684,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Google Analytics</span>
+                <span class="text-base md:text-lg">Google Analytics</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Data</span
                 >
@@ -486,7 +692,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">GSC / Pixels</span>
+                <span class="text-base md:text-lg">GSC / Pixels</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Tracking</span
                 >
@@ -494,7 +700,7 @@
               <li
                 class="flex justify-between items-center border-b border-white/5 pb-3"
               >
-                <span class="text-lg">Social Strategy</span>
+                <span class="text-base md:text-lg">Social Strategy</span>
                 <span class="text-gray-600 text-[9px] font-bold uppercase"
                   >Reach</span
                 >
@@ -505,6 +711,9 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════════ -->
     <section id="projects" class="py-32">
       <div class="max-w-7xl mx-auto px-6">
         <div class="mb-20">
@@ -514,226 +723,494 @@
           <div class="h-1 w-20 bg-accent"></div>
         </div>
         <div class="grid md:grid-cols-2 gap-16">
-         <!-- Takumi Website -->
-<div class="project-card group">
-  <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card border border-white/5 mb-8">
-    <img class="w-full h-full flex items-center justify-center" src="./img/takumi.png" alt="website-img">
-    <div class="absolute inset-0 bg-accent/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
-      <a href="https://takumi.edu.np/" target="_blank" class="px-8 py-3 bg-white text-black font-bold rounded-full scale-90 group-hover:scale-100 transition-transform">
-        Visit Site
-      </a>
-    </div>
-  </div>
-  <div class="flex justify-between items-start gap-4">
-    <div class="flex-1">
-      <h3 class="text-2xl font-bold mb-1">Takumi Website</h3>
-      <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-3">
-        TALL Stack / SEO
-      </p>
-      <p class="text-gray-400 text-sm leading-relaxed max-w-md">
-        Elevated their digital identity by merging high-performance TALL stack engineering with premium UI/UX, ensuring the brand ranks effectively and converts organic traffic.
-      </p>
-    </div>
-    <span class="text-accent font-bold text-xs tracking-tighter">2026</span>
-  </div>
-</div>
-
-    <!-- Mission Abroad Website -->
-    <div class="project-card group">
-        <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card border border-white/5 mb-8">
-          <img class="w-full h-full flex items-center justify-center" src="./img/mission-abroad.png" alt="website-img">
-          <div class="absolute inset-0 bg-accent/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
-              <a href="https://missionabroad.edu.np/" target="_blank" class="px-8 py-3 bg-white text-black font-bold rounded-full scale-90 group-hover:scale-100 transition-transform">
-                Visit Site
-              </a>
+          <!-- Takumi Website -->
+          <div class="project-card group">
+            <div
+              class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card border border-white/5 mb-8"
+            >
+              <img
+                class="w-full h-full object-cover"
+                src="./img/takumi.png"
+                alt="Takumi Education website built with TALL stack — Laravel, Livewire, Alpine.js, Tailwind CSS by Nunam Rai"
+                loading="lazy"
+                width="800"
+                height="500"
+              />
+              <div
+                class="absolute inset-0 bg-accent/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4 backdrop-blur-sm"
+              >
+                <a
+                  href="https://takumi.edu.np/"
+                  target="_blank"
+                  rel="noopener"
+                  class="px-7 py-3 bg-white text-black font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
+                >
+                  Visit Site
+                </a>
+                <a
+                  href="#takumi-case"
+                  class="px-7 py-3 bg-black/60 border border-white/30 text-white font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
+                >
+                  Case Study
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-between items-start gap-4">
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold mb-1">Takumi Website</h3>
+                <p
+                  class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-3"
+                >
+                  TALL Stack / SEO
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+                  Elevated their digital identity by merging high-performance
+                  TALL stack engineering with premium UI/UX, ensuring the brand
+                  ranks effectively and converts organic traffic.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >Laravel</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >Filament</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >Livewire</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >SEO</span
+                  >
+                </div>
+              </div>
+              <span class="text-accent font-bold text-xs tracking-tighter"
+                >2026</span
+              >
+            </div>
           </div>
-      </div>
-        <div class="flex justify-between items-start gap-4">
-    <div class="flex-1">
-      <h3 class="text-2xl font-bold mb-1">Mission Abroad Website</h3>
-      <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-3">
-        TALL Stack / SEO
-      </p>
-      <p class="text-gray-400 text-sm leading-relaxed max-w-md">
-        Established global credibility through a sophisticated, responsive design and performance-first development, creating a seamless gateway for their international clientele.
-      </p>
-    </div>
-    <span class="text-accent font-bold text-xs tracking-tighter">2026</span>
-  </div>
-</div>
 
+          <!-- Mission Abroad Website -->
+          <div class="project-card group">
+            <div
+              class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card border border-white/5 mb-8"
+            >
+              <img
+                class="w-full h-full object-cover"
+                src="./img/mission-abroad.png"
+                alt="Mission Abroad education consultancy website built with TALL stack and SEO architecture by Nunam Rai"
+                loading="lazy"
+                width="800"
+                height="500"
+              />
+              <div
+                class="absolute inset-0 bg-accent/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4 backdrop-blur-sm"
+              >
+                <a
+                  href="https://missionabroad.edu.np/"
+                  target="_blank"
+                  rel="noopener"
+                  class="px-7 py-3 bg-white text-black font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
+                >
+                  Visit Site
+                </a>
+                <a
+                  href="#missionabroad-case"
+                  class="px-7 py-3 bg-black/60 border border-white/30 text-white font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
+                >
+                  Case Study
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-between items-start gap-4">
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold mb-1">Mission Abroad Website</h3>
+                <p
+                  class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-3"
+                >
+                  TALL Stack / SEO
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+                  Established global credibility through a sophisticated,
+                  responsive design and performance-first development, creating
+                  a seamless gateway for their international clientele.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >Laravel</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >Filament</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >Tailwind</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
+                    >SEO</span
+                  >
+                </div>
+              </div>
+              <span class="text-accent font-bold text-xs tracking-tighter"
+                >2026</span
+              >
+            </div>
+          </div>
         </div>
-      </div>      
+      </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         BRANDS
+    ═══════════════════════════════════════════ -->
     <section id="brands" class="py-32 bg-darker border-t border-white/5">
-  <div class="max-w-7xl mx-auto px-6">
-    
-    <!-- Heading -->
-    <div class="mb-20 text-center">
-      <h2 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
-        BRANDS I <span class="text-accent italic">GROW</span>
-      </h2>
-      <p class="text-gray-500 max-w-2xl mx-auto">
-        Not just designs — I manage, scale, and grow brand presence across social platforms with real results.
-      </p>
-    </div>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-20 text-center">
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
+            BRANDS I <span class="text-accent italic">GROW</span>
+          </h2>
+          <p class="text-gray-500 max-w-2xl mx-auto">
+            Not just designs — I manage, scale, and grow brand presence across
+            social platforms with real results.
+          </p>
+        </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Tiny Tots -->
+          <div
+            class="p-8 rounded-2xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all"
+          >
+            <h3 class="text-2xl font-bold mb-2">Tiny Tots Kinder Home</h3>
+            <p
+              class="text-sm text-accent mb-4 font-bold uppercase tracking-widest"
+            >
+              Featured Project
+            </p>
+            <p class="text-gray-400 text-sm mb-6">
+              Complete brand growth including content strategy, admissions
+              campaigns, and social presence management. Built strong local
+              trust and consistent engagement.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/tinytotsbirtamode/"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/ttkh_official"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
 
-      <!-- Tiny Tots (Priority) -->
-      <div class="p-8 rounded-2xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all">
-        <h3 class="text-2xl font-bold mb-2">Tiny Tots Kinder Home</h3>
-        <p class="text-sm text-accent mb-4 font-bold uppercase tracking-widest">Featured Project</p>
-        <p class="text-gray-400 text-sm mb-6">
-          Complete brand growth including content strategy, admissions campaigns, and social presence management. Built strong local trust and consistent engagement.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/tinytotsbirtamode/" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-          <a href="https://www.instagram.com/ttkh_official" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
+          <!-- Shishu Pragya Sadan -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Shishu Pragya Sadan School</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Enhancing digital presence for an established educational
+              institution by creating structured, informative, and engaging
+              content that builds trust among parents and the local community.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/Shishupragyasadanschool"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/shishu_pragya_sadan"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- Puran Murti -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Puran Murti-Nepal</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Driving student engagement and admissions through strategic
+              branding, promotional creatives, and consistent content tailored
+              for academic growth and credibility.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/puranmurtinepal"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/puranmurti_nepal"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- Dallus Momo -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Dallus Momo</h3>
+            <p class="text-gray-500 text-xs uppercase mb-4">UK Based Brand</p>
+            <p class="text-gray-400 text-sm mb-6">
+              Building strong food brand identity with scroll-stopping visuals
+              and engaging content for international Nepali audiences.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/dallusmomo"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://instagram.com/dallus_momo"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- Mission USA -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Mission USA Education</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Driving student inquiries through targeted content, branding, and
+              performance-focused social campaigns.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/missionusa/"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/mission_usa_education"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- New York Education -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">
+              New York Education Consultancy
+            </h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Managed digital presence for an education consultancy focused on
+              abroad studies. Created structured content strategies to improve
+              inquiries, trust, and student engagement.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/newyorkeducationconsultancy"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/newyork_edu"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- One Bite -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">One Bite Birtamode</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Built a strong local food brand presence using creative visuals
+              and consistent engagement strategies.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/onebitebirtamode/"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/one_bite.btm"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- Go69 Pizza -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Go69 Pizza</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              High-impact social content and branding to attract local audience
+              and boost engagement.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/go69pizzabirtamode/"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/go69pizza.btm"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- Pizza Ghar -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Pizza Ghar</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Designed engaging creatives and campaigns to strengthen brand
+              recall and local reach.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/PizzzaGhar/"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+            </div>
+          </div>
+
+          <!-- Dhaula Engineers -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Dhaula Engineers</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Professional branding and structured content to establish
+              authority in the engineering sector.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/dhaulaengineers/"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+            </div>
+          </div>
+
+          <!-- Himal Food Store -->
+          <div
+            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
+          >
+            <h3 class="text-xl font-bold mb-2">Himal Food Store</h3>
+            <p class="text-gray-500 text-xs uppercase mb-4">UK Based Brand</p>
+            <p class="text-gray-400 text-sm mb-6">
+              Managing international brand presence with engaging product
+              visuals and content strategy tailored for Nepali audiences abroad.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/himalfoodstore/"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com/himalfoodstore"
+                target="_blank"
+                rel="noopener"
+                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
+                >Instagram</a
+              >
+            </div>
+          </div>
+
+          <!-- Your Brand Here -->
+          <div
+            class="p-8 rounded-2xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-xl font-bold mb-2">Your Brand Here</h3>
+              <p
+                class="text-accent text-xs uppercase font-bold mb-4 tracking-widest"
+              >
+                Let's Build Something
+              </p>
+              <p class="text-gray-400 text-sm mb-6">
+                Want your brand to stand here? I help businesses grow through
+                design, development, and social media strategy that actually
+                brings results — not just posts.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/9779816916916"
+              target="_blank"
+              rel="noopener"
+              class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition w-fit"
+            >
+              Contact Me
+            </a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Shishu Pragya Sadan -->
-<div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-  <h3 class="text-xl font-bold mb-2">Shishu Pragya Sadan School</h3>
-  <p class="text-gray-400 text-sm mb-6">
-    Enhancing digital presence for an established educational institution by creating structured, informative, and engaging content that builds trust among parents and the local community.
-  </p>
-  <div class="flex gap-3">
-    <a href="https://www.facebook.com/Shishupragyasadanschool" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-    <a href="https://www.instagram.com/shishu_pragya_sadan" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-  </div>
-</div>
-
-<!-- Puran Murti Campus -->
-<div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-  <h3 class="text-xl font-bold mb-2">Puran Murti-Nepal</h3>
-  <p class="text-gray-400 text-sm mb-6">
-    Driving student engagement and admissions through strategic branding, promotional creatives, and consistent content tailored for academic growth and credibility.
-  </p>
-  <div class="flex gap-3">
-    <a href="https://www.facebook.com/puranmurtinepal" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-    <a href="https://www.instagram.com/puranmurti_nepal" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-  </div>
-</div>
-
-      <!-- Dallus Momo (UK) -->
-      <div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-        <h3 class="text-xl font-bold mb-2">Dallus Momo</h3>
-        <p class="text-gray-500 text-xs uppercase mb-4">UK Based Brand</p>
-        <p class="text-gray-400 text-sm mb-6">
-          Building strong food brand identity with scroll-stopping visuals and engaging content for international Nepali audiences.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/dallusmomo" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-          <a href="https://instagram.com/dallus_momo" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-        </div>
-      </div>
-
-      <!-- Mission USA -->
-      <div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-        <h3 class="text-xl font-bold mb-2">Mission USA Education</h3>
-        <p class="text-gray-400 text-sm mb-6">
-          Driving student inquiries through targeted content, branding, and performance-focused social campaigns.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/missionusa/" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-          <a href="https://www.instagram.com/mission_usa_education" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-        </div>
-      </div>
-
-      <!-- New York Education Consultancy -->
-<div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-  <h3 class="text-xl font-bold mb-2">New York Education Consultancy</h3>
-  <p class="text-gray-400 text-sm mb-6">
-    Managed digital presence for an education consultancy focused on abroad studies. Created structured content strategies to improve inquiries, trust, and student engagement.
-  </p>
-  <div class="flex gap-3">
-    <a href="https://www.facebook.com/newyorkeducationconsultancy" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-    <a href="https://www.instagram.com/newyork_edu" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-  </div>
-</div>
-
-      <!-- One Bite -->
-      <div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-        <h3 class="text-xl font-bold mb-2">One Bite Birtamode</h3>
-        <p class="text-gray-400 text-sm mb-6">
-          Built a strong local food brand presence using creative visuals and consistent engagement strategies.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/onebitebirtamode/" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-          <a href="https://www.instagram.com/one_bite.btm" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-        </div>
-      </div>
-
-      <!-- Go69 Pizza -->
-      <div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-        <h3 class="text-xl font-bold mb-2">Go69 Pizza</h3>
-        <p class="text-gray-400 text-sm mb-6">
-          High-impact social content and branding to attract local audience and boost engagement.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/go69pizzabirtamode/" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-          <a href="https://www.instagram.com/go69pizza.btm" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-        </div>
-      </div>
-
-      <!-- Pizza Ghar -->
-      <div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-        <h3 class="text-xl font-bold mb-2">Pizza Ghar</h3>
-        <p class="text-gray-400 text-sm mb-6">
-          Designed engaging creatives and campaigns to strengthen brand recall and local reach.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/PizzzaGhar/" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-        </div>
-      </div>
-
-      <!-- Dhaula Engineers -->
-      <div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-        <h3 class="text-xl font-bold mb-2">Dhaula Engineers</h3>
-        <p class="text-gray-400 text-sm mb-6">
-          Professional branding and structured content to establish authority in the engineering sector.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/dhaulaengineers/" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-        </div>
-      </div>
-
-       <!-- Himal Food Store (UK) -->
-      <div class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all">
-        <h3 class="text-xl font-bold mb-2">Himal Food Store</h3>
-        <p class="text-gray-500 text-xs uppercase mb-4">UK Based Brand</p>
-        <p class="text-gray-400 text-sm mb-6">
-          Managing international brand presence with engaging product visuals and content strategy tailored for Nepali audiences abroad.
-        </p>
-        <div class="flex gap-3">
-          <a href="https://www.facebook.com/himalfoodstore/" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition">Facebook</a>
-          <a href="https://www.instagram.com/himalfoodstore" target="_blank" class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition">Instagram</a>
-        </div>
-      </div>
-
-<!-- Your Brand Here (Creative Slot) -->
-<div class="p-8 rounded-2xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all flex flex-col justify-between">
-  <div>
-    <h3 class="text-xl font-bold mb-2">Your Brand Here</h3>
-    <p class="text-accent text-xs uppercase font-bold mb-4 tracking-widest">
-      Let's Build Something
-    </p>
-    <p class="text-gray-400 text-sm mb-6">
-      Want your brand to stand here? I help businesses grow through design, development, and social media strategy that actually brings results — not just posts.
-    </p>
-  </div>
-
-  <a href="https://wa.me/9779816916916" target="_blank" class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition w-fit">
-    Contact Me
-  </a>
-</div>
-    </div>
-  </div>
-</section>
-
+    <!-- ═══════════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════════ -->
     <section id="services" class="py-32 bg-black/40">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-20">
@@ -769,7 +1246,7 @@
               </div>
               <p class="text-gray-500 leading-relaxed">
                 Crafting distinctive logos and visual systems that define your
-                brand’s personality across all digital touchpoints.
+                brand's personality across all digital touchpoints.
               </p>
             </div>
 
@@ -817,131 +1294,215 @@
         </div>
       </div>
     </section>
-<section id="pricing" class="py-32 border-t border-white/5 bg-darker">
-  <div class="max-w-7xl mx-auto px-6">
 
-    <!-- Heading -->
-    <div class="text-center mb-20">
-      <h2 class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4">
-        Pricing
-      </h2>
-      <h3 class="text-4xl md:text-6xl font-bold tracking-tighter">
-        SIMPLE. <span class="italic text-gradient">TRANSPARENT.</span><br/>
-        BUILT FOR <span class="text-accent">RESULTS.</span>
-      </h3>
-      <p class="text-gray-500 mt-6 max-w-2xl mx-auto">
-        Every project is customized based on your goals. No hourly billing — only
-        outcome-focused work designed to grow your brand.
-      </p>
-    </div>
-
-    <!-- Pricing Cards -->
-    <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-
-      <!-- Design & Marketing -->
-      <div class="border border-white/10 rounded-2xl p-10 bg-white/[0.02] hover:bg-white/[0.05] transition-all">
-        <h4 class="text-2xl font-bold mb-4">
-          Design & Marketing
-        </h4>
-
-        <p class="text-gray-500 text-sm mb-6">
-          Ongoing creative support, branding, and marketing execution for growing businesses.
-        </p>
-
-        <div class="text-3xl font-black mb-6">
-          From NPR 10,000 / mo
+    <!-- ═══════════════════════════════════════════
+         PRICING
+    ═══════════════════════════════════════════ -->
+    <section id="pricing" class="py-32 border-t border-white/5 bg-darker">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2
+            class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4"
+          >
+            Pricing
+          </h2>
+          <h3 class="text-4xl md:text-6xl font-bold tracking-tighter">
+            SIMPLE. <span class="italic text-gradient">TRANSPARENT.</span><br />
+            BUILT FOR <span class="text-accent">RESULTS.</span>
+          </h3>
+          <p class="text-gray-500 mt-6 max-w-2xl mx-auto">
+            Every project is customized based on your goals. No hourly billing —
+            only outcome-focused work designed to grow your brand.
+          </p>
         </div>
 
-        <ul class="space-y-4 text-gray-400 text-sm">
-          <li>✔ Social Media Creatives</li>
-          <li>✔ Branding & Visual Identity</li>
-          <li>✔ Ad Creatives (Meta / Google)</li>
-          <li>✔ Motion Graphics</li>
-          <li>✔ Strategy Support</li>
-        </ul>
+        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <!-- Design & Marketing -->
+          <div
+            class="border border-white/10 rounded-2xl p-10 bg-white/[0.02] hover:bg-white/[0.05] transition-all"
+          >
+            <h4 class="text-2xl font-bold mb-4">Design & Marketing</h4>
+            <p class="text-gray-500 text-sm mb-6">
+              Ongoing creative support, branding, and marketing execution for
+              growing businesses.
+            </p>
+            <div class="text-3xl font-black mb-2">From NPR 10,000 / mo</div>
+            <p class="text-xs text-amber-400/80 mb-6 font-medium">
+              ⚠ Monthly fee covers creative & management only. Ad spend
+              (Facebook Ads, Google Ads) is billed separately and paid directly
+              to the platform.
+            </p>
+            <ul class="space-y-4 text-gray-400 text-sm">
+              <li>✔ Social Media Creatives</li>
+              <li>✔ Branding & Visual Identity</li>
+              <li>✔ Ad Creatives (Meta / Google)</li>
+              <li>✔ Motion Graphics</li>
+              <li>✔ Strategy Support</li>
+            </ul>
+            <div class="mt-8 text-xs text-gray-600 uppercase tracking-widest">
+              Custom Plans Available
+            </div>
+          </div>
 
-        <div class="mt-8 text-xs text-gray-600 uppercase tracking-widest">
-          Custom Plans Available
+          <!-- Web Development -->
+          <div
+            class="border border-accent rounded-2xl p-10 bg-accent/10 relative"
+          >
+            <h4 class="text-2xl font-bold mb-4">Web Development</h4>
+            <p class="text-gray-400 text-sm mb-6">
+              High-performance websites and web apps designed to convert and
+              scale.
+            </p>
+            <div class="text-3xl font-black mb-2">From NPR 35,000</div>
+            <p class="text-xs text-gray-500 mb-6 font-medium">
+              One-time project fee. Hosting & domain are charged separately and
+              billed to you directly.
+            </p>
+            <ul class="space-y-4 text-gray-300 text-sm">
+              <li>✔ Custom Website / Web App</li>
+              <li>✔ TALL Stack Development</li>
+              <li>✔ Filament Admin Dashboard</li>
+              <li>✔ SEO-Ready Architecture</li>
+              <li>✔ Fast & Responsive Design</li>
+              <li>✔ Performance Optimization</li>
+            </ul>
+            <div class="mt-8 text-xs text-accent uppercase tracking-widest">
+              Built for Conversion
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-16">
+          <p class="text-gray-500 max-w-xl mx-auto text-sm">
+            Final pricing depends on scope, complexity, and business goals.
+            Let's discuss what you need and build something that actually
+            performs.
+          </p>
+          <a
+            href="https://wa.me/9779816916916"
+            class="inline-block mt-8 px-10 py-4 bg-accent rounded-full font-bold hover:scale-105 transition-transform"
+          >
+            Get Custom Quote
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- Web Development -->
-      <div class="border border-accent rounded-2xl p-10 bg-accent/10 relative">
-        <h4 class="text-2xl font-bold mb-4">
-          Web Development
-        </h4>
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer class="py-32 border-t border-white/5 relative overflow-hidden">
+      <div
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-accent/5 blur-[120px] pointer-events-none"
+      ></div>
+      <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <h2
+          class="footer-title text-5xl md:text-8xl font-black tracking-tighter mb-10"
+        >
+          LET'S BUILD <span class="text-accent italic">IT.</span>
+        </h2>
 
-        <p class="text-gray-400 text-sm mb-6">
-          High-performance websites and web apps designed to convert and scale.
-        </p>
+        <div class="flex flex-col items-center gap-8">
+          <a
+            href="https://wa.me/9779816916916"
+            target="_blank"
+            rel="noopener"
+            class="inline-block px-12 py-5 bg-white text-black rounded-full font-black hover:bg-accent hover:text-white transition-all tracking-widest uppercase shadow-2xl"
+          >
+            WhatsApp Me
+          </a>
 
-        <div class="text-3xl font-black mb-6">
-          From NPR 35,000
+          <div
+            class="flex flex-wrap justify-center gap-6 md:gap-10 text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400"
+          >
+            <a
+              href="https://www.behance.net/bobstudioo"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-accent transition-colors"
+              >Behance</a
+            >
+            <a
+              href="http://instagram.com/bobstudio_official"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-accent transition-colors"
+              >Instagram</a
+            >
+            <a
+              href="https://www.facebook.com/bobstudioo/"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-accent transition-colors"
+              >Facebook</a
+            >
+            <a
+              href="https://www.pinterest.com/bob_studio/"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-accent transition-colors"
+              >Pinterest</a
+            >
+            <a
+              href="https://github.com/nunamrai/"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-accent transition-colors"
+              >Github</a
+            >
+          </div>
         </div>
 
-        <ul class="space-y-4 text-gray-300 text-sm">
-          <li>✔ Custom Website / Web App</li>
-          <li>✔ TALL Stack Development</li>
-          <li>✔ SEO-Ready Architecture</li>
-          <li>✔ Fast & Responsive Design</li>
-          <li>✔ Performance Optimization</li>
-        </ul>
-
-        <!-- Hosting Note -->
-        <div class="mt-8 text-xs text-gray-500 leading-relaxed">
-          Hosting & domain are charged separately. For setup guidance and recommendations, just say hi.
-        </div>
-
-        <div class="mt-4 text-xs text-accent uppercase tracking-widest">
-          Built for Conversion
+        <div
+          class="mt-32 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase"
+        >
+          <!-- Dynamic year -->
+          <p>
+            &copy; <span id="footer-year"></span> NUNAM RAI — CRAFTING DIGITAL
+            POETRY
+          </p>
+          <div class="flex items-center space-x-2 mt-6 md:mt-0">
+            <span
+              class="w-2 h-2 rounded-full bg-green-500 animate-pulse"
+            ></span>
+            <span>SYSTEMS ONLINE</span>
+          </div>
         </div>
       </div>
+    </footer>
 
-    </div>
-
-    <!-- Bottom CTA -->
-    <div class="text-center mt-16">
-      <p class="text-gray-500 max-w-xl mx-auto text-sm">
-        Final pricing depends on scope, complexity, and business goals.
-        Let’s discuss what you need and build something that actually performs.
-      </p>
-
-      <a href="https://wa.me/9779816916916"
-         class="inline-block mt-8 px-10 py-4 bg-accent rounded-full font-bold hover:scale-105 transition-transform">
-        Get Custom Quote
-      </a>
-    </div>
-
-  </div>
-</section>
-   <footer class="py-32 border-t border-white/5 relative overflow-hidden">
-  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-accent/5 blur-[120px] pointer-events-none"></div>
-  <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-    <h2 class="footer-title text-5xl md:text-8xl font-black tracking-tighter mb-10">
-      LET'S BUILD <span class="text-accent italic">IT.</span>
-    </h2>
-    
-    <div class="flex flex-col items-center gap-8">
-      <a href="https://wa.me/9779816916916" target="_blank" class="inline-block px-12 py-5 bg-white text-black rounded-full font-black hover:bg-accent hover:text-white transition-all tracking-widest uppercase shadow-2xl">
-        WhatsApp Me
-      </a>
-
-      <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400">
-        <a href="https://www.behance.net/bobstudioo" target="_blank" class="hover:text-accent transition-colors">Behance</a>
-        <a href="http://instagram.com/bobstudio_official" target="_blank" class="hover:text-accent transition-colors">Instagram</a>
-        <a href="https://www.facebook.com/bobstudioo/" target="_blank" class="hover:text-accent transition-colors">Facebook</a>
-        <a href="https://www.pinterest.com/bob_studio/" target="_blank" class="hover:text-accent transition-colors">Pinterest</a>
-        <a href="https://github.com/nunamrai/" target="_blank" class="hover:text-accent transition-colors">Github</a>
-      </div>
-    </div>
-
-    <div class="mt-32 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase">
-      <p>&copy; 2026 NUNAM RAI — CRAFTING DIGITAL POETRY</p>
-      <div class="flex items-center space-x-2 mt-6 md:mt-0">
-        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-        <span>SYSTEMS ONLINE</span>
+    <!-- ═══════════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════════ -->
     <script>
-      // 1. Smooth Scroll
+      // ── Dynamic footer year ──
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+
+      // ── Mobile menu toggle ──
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        if (isOpen) {
+          mobileMenu.classList.add("hidden");
+          hamburger.classList.remove("ham-open");
+        } else {
+          mobileMenu.classList.remove("hidden");
+          hamburger.classList.add("ham-open");
+        }
+      });
+
+      // Close mobile menu when a nav link is clicked
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          hamburger.classList.remove("ham-open");
+        });
+      });
+
+      // ── Smooth Scroll (Lenis) ──
       const lenis = new Lenis();
       function raf(time) {
         lenis.raf(time);
@@ -949,10 +1510,9 @@
       }
       requestAnimationFrame(raf);
 
-      // 2. GSAP
+      // ── GSAP Animations ──
       gsap.registerPlugin(ScrollTrigger);
 
-      // Hero Entrance
       gsap.from(".hero-title, .hero-p, .hero-btns", {
         y: 60,
         opacity: 0,
@@ -961,7 +1521,6 @@
         ease: "power4.out",
       });
 
-      // About Entrance
       gsap.from("#about h3, #about p", {
         scrollTrigger: { trigger: "#about", start: "top 80%" },
         y: 40,
@@ -970,7 +1529,6 @@
         duration: 1,
       });
 
-      // Project Cards
       gsap.utils.toArray(".project-card").forEach((card) => {
         gsap.from(card, {
           scrollTrigger: { trigger: card, start: "top 90%" },
@@ -980,7 +1538,6 @@
         });
       });
 
-      // Services
       gsap.from(".service-item", {
         scrollTrigger: { trigger: "#services", start: "top 70%" },
         x: -40,
