@@ -1,1534 +1,2072 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
 
-    <!-- ═══ PRIMARY SEO META TAGS ═══ -->
     <title>Nunam Rai | Creative Developer & Designer — Nepal</title>
     <meta
       name="description"
-      content="Nunam Rai is an independent creative developer and designer based in Nepal, specializing in TALL Stack web development, branding, video production, and digital marketing for growing brands."
+      content="Nunam Rai — freelance graphic designer and web developer from Nepal. Creating meaningful digital experiences, websites and brand identities."
     />
     <meta
       name="keywords"
-      content="Nunam Rai, web developer Nepal, TALL stack developer, Laravel developer Nepal, branding designer Nepal, digital marketing Nepal, Filament PHP, SEO Nepal, freelancer Nepal"
+      content="Nunam Rai, web developer Nepal, graphic designer Nepal, freelance designer, Laravel developer, brand design"
     />
     <meta name="author" content="Nunam Rai" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://nunamrai.github.io/" />
 
-    <!-- ═══ OPEN GRAPH (Facebook / LinkedIn) ═══ -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nunamrai.github.io/" />
     <meta
       property="og:title"
-      content="Nunam Rai | Creative Developer & Designer — Nepal"
+      content="Nunam Rai — Creative Developer & Designer"
     />
     <meta
       property="og:description"
-      content="Independent Developer & Designer specializing in the TALL Stack and Premium Visual Identities. Based in Nepal, open for projects worldwide."
+      content="Helping brands shine through thoughtful design and digital experiences."
     />
+    <meta property="og:url" content="https://nunamrai.github.io/" />
     <meta
       property="og:image"
-      content="https://nunamrai.github.io/img/og-cover.jpg"
+      content="https://nunamrai.github.io/img/wife&26me&26furry(1).jpg"
     />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Nunam Rai" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- ═══ TWITTER CARD ═══ -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://nunamrai.github.io/" />
     <meta
       name="twitter:title"
-      content="Nunam Rai | Creative Developer & Designer — Nepal"
+      content="Nunam Rai — Creative Developer & Designer"
     />
     <meta
       name="twitter:description"
-      content="Independent Developer & Designer specializing in the TALL Stack and Premium Visual Identities."
-    />
-    <meta
-      name="twitter:image"
-      content="https://nunamrai.github.io/img/og-cover.jpg"
+      content="Freelance graphic designer and web developer from Nepal."
     />
 
-    <!-- ═══ SCHEMA.ORG STRUCTURED DATA ═══ -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Nunam Rai",
-        "url": "https://nunamrai.github.io/",
-        "sameAs": [
-          "https://github.com/nunamrai/",
-          "https://www.behance.net/bobstudioo",
-          "http://instagram.com/bobstudio_official",
-          "https://www.facebook.com/bobstudioo/"
-        ],
-        "jobTitle": "Creative Developer & Designer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Bob Studio"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "NP"
-        },
-        "description": "Independent Developer & Designer specializing in TALL Stack development, branding, and digital marketing.",
-        "knowsAbout": [
-          "Laravel",
-          "Filament PHP",
-          "Livewire",
-          "Alpine.js",
-          "Tailwind CSS",
-          "SEO",
-          "Branding",
-          "Digital Marketing"
-        ]
-      }
-    </script>
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
 
-    <!-- ═══ FONTS ═══ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- ═══ SCRIPTS ═══ -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            fontFamily: { sans: ["Plus Jakarta Sans", "sans-serif"] },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
             colors: {
               accent: "#a855f7",
-              darker: "#050505",
-              card: "#0f0f0f",
-            },
-            animation: {
-              marquee: "marquee 50s linear infinite",
-              marquee2: "marquee2 50s linear infinite",
-            },
-            keyframes: {
-              marquee: {
-                "0%": { transform: "translateX(0%)" },
-                "100%": { transform: "translateX(-100%)" },
-              },
-              marquee2: {
-                "0%": { transform: "translateX(100%)" },
-                "100%": { transform: "translateX(0%)" },
-              },
             },
           },
         },
       };
     </script>
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css"
+    />
+
     <style>
-      html.lenis,
-      html.lenis body {
-        height: auto;
+      :root {
+        --bg: #050505;
+        --surface: #0f0f0f;
+        --accent: #a855f7;
+        --muted: #858585;
+        --border: rgba(255, 255, 255, 0.09);
       }
-      .lenis.lenis-smooth {
-        scroll-behavior: auto !important;
+
+      * {
+        box-sizing: border-box;
       }
-      .lenis.lenis-smooth [data-lenis-prevent] {
-        overscroll-behavior: contain;
+
+      html {
+        background: var(--bg);
+        scroll-behavior: auto;
       }
-      .lenis.lenis-stopped {
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: #fff;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .section-padding {
+        padding: 110px 0;
+      }
+
+      .section-label {
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .section-heading {
+        font-size: clamp(2.2rem, 5vw, 4.3rem);
+        line-height: 1.08;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+      }
+
+      .gradient-text {
+        background: linear-gradient(100deg, #fff 5%, #c084fc 55%, #9333ea 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+      .text-muted {
+        color: var(--muted);
+      }
+
+      .accent-button,
+      .outline-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 22px;
+        border-radius: 100px;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.3s ease;
+      }
+
+      .accent-button {
+        background: var(--accent);
+        color: white;
+      }
+
+      .accent-button:hover {
+        background: #9333ea;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 35px rgba(168, 85, 247, 0.2);
+      }
+
+      .outline-button {
+        border: 1px solid var(--border);
+        color: white;
+      }
+
+      .outline-button:hover {
+        border-color: var(--accent);
+        color: #c084fc;
+        transform: translateY(-3px);
+      }
+
+      /* Navigation */
+
+      .navbar {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 100;
+        padding: 20px 0;
+        transition: 0.3s ease;
+      }
+
+      .navbar.scrolled {
+        padding: 12px 0;
+        background: rgba(5, 5, 5, 0.88);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-link {
+        color: #a3a3a3;
+        font-size: 12px;
+        font-weight: 600;
+        transition: 0.25s ease;
+      }
+
+      .nav-link:hover {
+        color: white;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+      .mobile-menu.open {
+        display: flex;
+      }
+
+      /* Hero */
+
+      .hero {
+        min-height: 100svh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 140px 0 100px;
+      }
+
+      .hero-glow {
+        position: absolute;
+        width: 650px;
+        height: 650px;
+        top: 5%;
+        right: -15%;
+        background: radial-gradient(
+          circle,
+          rgba(147, 51, 234, 0.15),
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        position: absolute;
+        inset: 0;
+        opacity: 0.15;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 80px 80px;
+        mask-image: linear-gradient(to bottom, black, transparent 85%);
+      }
+
+      .hero-title {
+        font-size: clamp(3.5rem, 10vw, 8.5rem);
+        line-height: 0.98;
+        font-weight: 800;
+        letter-spacing: -0.085em;
+      }
+
+      .hero-intro {
+        max-width: 520px;
+        color: #a3a3a3;
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .availability-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #4ade80;
+        box-shadow: 0 0 14px #4ade80;
+      }
+
+      /* About */
+
+      .about-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 30px;
+        transition: 0.3s ease;
+      }
+
+      .about-card:hover {
+        border-color: rgba(168, 85, 247, 0.4);
+        transform: translateY(-5px);
+      }
+
+      /* Personal story */
+
+      .story-image-wrap {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background: #111;
+      }
+
+      .story-image {
+        width: 100%;
+        aspect-ratio: 4 / 4.5;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+      }
+
+      .story-image-wrap:hover .story-image {
+        transform: scale(1.035);
+      }
+
+      .story-image-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 45% 0 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+        pointer-events: none;
+      }
+
+      .story-caption {
+        position: absolute;
+        z-index: 2;
+        left: 22px;
+        bottom: 20px;
+        font-size: 11px;
+        color: white;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .story-copy {
+        color: #a3a3a3;
+        font-size: 14px;
+        line-height: 2;
+      }
+
+      .story-quote {
+        padding-left: 20px;
+        border-left: 2px solid var(--accent);
+        color: #e5e5e5;
+        font-size: 17px;
+        line-height: 1.8;
+        font-weight: 500;
+      }
+
+      /* Marquee */
+
+      .marquee {
+        overflow: hidden;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 25px 0;
+      }
+
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 35s linear infinite;
+      }
+
+      .marquee-item {
+        padding: 0 35px;
+        color: #777;
+        font-size: 16px;
+        font-weight: 700;
+        white-space: nowrap;
+        letter-spacing: 0.04em;
+      }
+
+      @keyframes marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Skills */
+
+      .skill-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 24px;
+        border-radius: 18px;
+        transition: 0.3s ease;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(168, 85, 247, 0.4);
+      }
+
+      .skill-number {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      /* Projects */
+
+      .project-section {
         overflow: hidden;
       }
 
-      .text-gradient {
-        background: linear-gradient(135deg, #fff 30%, #a855f7 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      .project-toolbar {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 35px;
       }
-      .purple-glow-bg {
-        background: radial-gradient(
-          circle at 50% 50%,
-          rgba(168, 85, 247, 0.15) 0%,
-          rgba(5, 5, 5, 0) 70%
+
+      .project-controls {
+        display: flex;
+        gap: 10px;
+      }
+
+      .slider-btn {
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: var(--surface);
+        color: white;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: 0.25s ease;
+      }
+
+      .slider-btn:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .project-slider {
+        display: flex;
+        gap: 22px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        padding: 4px 2px 25px;
+        cursor: grab;
+        overscroll-behavior-x: contain;
+      }
+
+      .project-slider::-webkit-scrollbar {
+        display: none;
+      }
+
+      .project-slider.dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+        user-select: none;
+      }
+
+      .project-card {
+        flex: 0 0 calc((100% - 44px) / 3);
+        min-width: 280px;
+        scroll-snap-align: start;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        border-radius: 20px;
+        overflow: hidden;
+        transition:
+          border-color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .project-card:hover {
+        border-color: rgba(168, 85, 247, 0.55);
+        transform: translateY(-5px);
+      }
+
+      .project-image {
+        position: relative;
+        height: 235px;
+        overflow: hidden;
+        background: #171717;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.65s ease;
+      }
+
+      .project-card:hover .project-image img {
+        transform: scale(1.06);
+      }
+
+      .project-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.65),
+          transparent 55%
+        );
+        opacity: 0.65;
+      }
+
+      .project-arrow {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: 0.3s ease;
+      }
+
+      .project-card:hover .project-arrow {
+        background: var(--accent);
+        transform: rotate(45deg);
+      }
+
+      .project-content {
+        padding: 23px;
+      }
+
+      .project-category {
+        color: #c084fc;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .project-title {
+        margin-top: 9px;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+
+      .project-description {
+        margin-top: 8px;
+        color: #858585;
+        font-size: 12px;
+        line-height: 1.8;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 17px;
+      }
+
+      .project-tag {
+        padding: 6px 10px;
+        border: 1px solid var(--border);
+        border-radius: 50px;
+        color: #aaa;
+        font-size: 10px;
+      }
+
+      .project-pending {
+        cursor: default;
+      }
+
+      .project-pending .project-arrow {
+        width: auto;
+        height: auto;
+        padding: 8px 12px;
+        border-radius: 30px;
+        color: #ddd;
+        font-size: 10px;
+      }
+
+      .project-pending:hover .project-arrow {
+        background: rgba(0, 0, 0, 0.55);
+        transform: none;
+      }
+
+      .project-pending:hover {
+        transform: none;
+      }
+
+      .slider-progress {
+        height: 2px;
+        background: #242424;
+        margin-top: 5px;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .slider-progress-bar {
+        height: 100%;
+        width: 0;
+        background: var(--accent);
+        transition: width 0.15s ease;
+      }
+
+      /* Brands I Grow */
+
+      .brand-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 115px;
+        padding: 22px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        color: #b5b5b5;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        transition: 0.3s ease;
+      }
+
+      .brand-card:hover {
+        color: white;
+        border-color: rgba(168, 85, 247, 0.5);
+        transform: translateY(-4px);
+        background: #131019;
+      }
+
+      .brand-card span {
+        display: block;
+        color: #666;
+        font-size: 9px;
+        font-weight: 500;
+        margin-top: 7px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      /* Services */
+
+      .service-card {
+        padding: 30px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        transition: 0.3s ease;
+      }
+
+      .service-card:hover {
+        border-color: rgba(168, 85, 247, 0.4);
+        transform: translateY(-5px);
+      }
+
+      .service-icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: rgba(168, 85, 247, 0.12);
+        color: #c084fc;
+        font-size: 20px;
+      }
+
+      /* Pricing */
+
+      .pricing-card {
+        padding: 30px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        transition: 0.3s ease;
+      }
+
+      .pricing-card.featured {
+        border-color: rgba(168, 85, 247, 0.6);
+        background: linear-gradient(
+          145deg,
+          rgba(168, 85, 247, 0.1),
+          var(--surface) 55%
         );
       }
 
-      /* Glassmorphism nav */
-      .nav-glass {
-        background: rgba(5, 5, 5, 0.6);
-        backdrop-filter: blur(24px) saturate(180%);
-        -webkit-backdrop-filter: blur(24px) saturate(180%);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      .pricing-card:hover {
+        transform: translateY(-5px);
       }
 
-      /* Pause marquee on hover */
-      .group:hover .animate-marquee,
-      .group:hover .animate-marquee2 {
-        animation-play-state: paused;
+      .pricing-feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: #aaa;
+        font-size: 12px;
+        line-height: 1.7;
       }
 
-      /* Mobile menu */
-      #mobile-menu {
-        transition:
-          opacity 0.25s ease,
-          transform 0.25s ease;
+      .pricing-feature::before {
+        content: "✦";
+        color: var(--accent);
       }
-      #mobile-menu.hidden {
-        opacity: 0;
+
+      /* Contact */
+
+      .contact-panel {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(30px, 6vw, 70px);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        background:
+          radial-gradient(
+            circle at 90% 10%,
+            rgba(168, 85, 247, 0.18),
+            transparent 40%
+          ),
+          var(--surface);
+      }
+
+      /* Social links */
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: #999;
+        font-size: 12px;
+        transition: 0.25s ease;
+      }
+
+      .social-link:hover {
+        color: #c084fc;
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
+
+      footer {
+        border-top: 1px solid var(--border);
+      }
+
+      .footer-link {
+        color: #858585;
+        font-size: 12px;
+        transition: 0.25s ease;
+      }
+
+      .footer-link:hover {
+        color: #c084fc;
+      }
+
+      /* Cursor effect */
+
+      .cursor-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(168, 85, 247, 0.065),
+          transparent 70%
+        );
         pointer-events: none;
-        transform: translateY(-8px);
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        will-change: transform;
       }
-      #mobile-menu:not(.hidden) {
+
+      /* Reveal */
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+
+      .reveal.visible {
         opacity: 1;
         transform: translateY(0);
       }
 
-      /* Hamburger animation */
-      .ham-line {
-        transition: all 0.3s ease;
-        transform-origin: center;
-      }
-      .ham-open .ham-top {
-        transform: translateY(7px) rotate(45deg);
-      }
-      .ham-open .ham-mid {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-      .ham-open .ham-bot {
-        transform: translateY(-7px) rotate(-45deg);
+      @media (max-width: 900px) {
+        .project-card {
+          flex-basis: calc((100% - 22px) / 2);
+        }
       }
 
-      /* Skills mobile padding fix */
-      @media (max-width: 768px) {
-        #skills .grid > div {
-          padding: 1.75rem;
+      @media (max-width: 640px) {
+        .section-padding {
+          padding: 78px 0;
         }
-        #skills .grid > div ul li {
-          padding-bottom: 0.5rem;
+
+        .hero {
+          min-height: 90svh;
+          padding: 130px 0 80px;
+        }
+
+        .hero-title {
+          font-size: clamp(3.5rem, 16vw, 6rem);
+        }
+
+        .project-toolbar {
+          align-items: flex-end;
+        }
+
+        .project-card {
+          flex-basis: 86%;
+          min-width: 0;
+        }
+
+        .project-image {
+          height: 220px;
+        }
+
+        .cursor-glow {
+          display: none;
+        }
+
+        .story-image {
+          aspect-ratio: 5 / 4;
+        }
+
+        .story-copy {
+          font-size: 13px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
         }
       }
     </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nunam Rai",
+        "url": "https://nunamrai.github.io/",
+        "jobTitle": "Freelance Graphic Designer and Web Developer",
+        "description": "Freelance graphic designer and web developer from Nepal.",
+        "sameAs": [
+          "https://www.facebook.com/nunama.ra.i/",
+          "https://www.instagram.com/nunamrai0405/",
+          "https://www.behance.net/nunamrai",
+          "https://github.com/nunamrai/",
+          "https://www.pinterest.com/bob_studio/"
+        ]
+      }
+    </script>
   </head>
 
-  <body
-    class="bg-darker text-white font-sans selection:bg-accent selection:text-white"
-  >
-    <!-- ═══════════════════════════════════════════
-         NAVIGATION
-    ═══════════════════════════════════════════ -->
-    <nav class="fixed top-0 w-full z-[100] nav-glass">
-      <div
-        class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center"
-      >
-        <!-- Logo -->
-        <a href="#home" class="text-xl font-bold tracking-tighter uppercase">
-          Nunam<span class="text-accent">Rai.</span>
+  <body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar" id="navbar">
+      <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <a href="#home" class="text-xl font-extrabold tracking-tight">
+          nunam<span class="accent">.</span>
         </a>
 
-        <!-- Desktop Links -->
-        <div
-          class="hidden md:flex items-center space-x-8 text-[10px] font-bold tracking-[0.18em]"
-        >
-          <a href="#home" class="hover:text-accent transition-colors"
-            >THE VIBE</a
-          >
-          <a href="#about" class="hover:text-accent transition-colors"
-            >MY STORY</a
-          >
-          <a href="#projects" class="hover:text-accent transition-colors"
-            >THE WORK</a
-          >
-          <a href="#skills" class="hover:text-accent transition-colors"
-            >MY ARSENAL</a
-          >
-          <a href="#services" class="hover:text-accent transition-colors"
-            >WHAT I DO</a
-          >
-          <a href="#pricing" class="hover:text-accent transition-colors"
-            >THE RATES</a
-          >
-          <a
-            href="https://wa.me/9779816916916"
-            class="px-6 py-2 bg-white text-black rounded-full hover:bg-accent hover:text-white transition-all"
-            >LET'S TALK</a
-          >
+        <div class="hidden md:flex items-center gap-9">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#story">My Story</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#brands">Brands</a>
+          <a class="nav-link" href="#services">Services</a>
         </div>
 
-        <!-- Mobile Hamburger -->
+        <a
+          href="https://wa.me/9779816916916"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:inline-flex accent-button !py-3 !px-5"
+        >
+          Let's Talk <span>↗</span>
+        </a>
+
         <button
-          id="hamburger"
-          aria-label="Open mobile menu"
-          class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] focus:outline-none"
+          id="menuToggle"
+          class="md:hidden text-2xl text-white"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
         >
-          <span
-            class="ham-line ham-top block w-6 h-[2px] bg-white rounded-full"
-          ></span>
-          <span
-            class="ham-line ham-mid block w-6 h-[2px] bg-white rounded-full"
-          ></span>
-          <span
-            class="ham-line ham-bot block w-6 h-[2px] bg-white rounded-full"
-          ></span>
+          ☰
         </button>
-      </div>
+      </nav>
 
-      <!-- Mobile Menu Panel -->
       <div
-        id="mobile-menu"
-        class="hidden md:hidden absolute top-full left-0 w-full nav-glass border-t border-white/5 px-6 pt-6 pb-8"
+        id="mobileMenu"
+        class="mobile-menu flex-col gap-5 px-6 py-7 mt-4 glass md:hidden"
       >
-        <div
-          class="flex flex-col space-y-5 text-[13px] font-bold tracking-[0.2em] uppercase"
-        >
-          <a
-            href="#home"
-            class="mobile-nav-link hover:text-accent transition-colors py-1"
-            >The Vibe</a
-          >
-          <a
-            href="#about"
-            class="mobile-nav-link hover:text-accent transition-colors py-1"
-            >My Story</a
-          >
-          <a
-            href="#projects"
-            class="mobile-nav-link hover:text-accent transition-colors py-1"
-            >The Work</a
-          >
-          <a
-            href="#skills"
-            class="mobile-nav-link hover:text-accent transition-colors py-1"
-            >My Arsenal</a
-          >
-          <a
-            href="#services"
-            class="mobile-nav-link hover:text-accent transition-colors py-1"
-            >What I Do</a
-          >
-          <a
-            href="#pricing"
-            class="mobile-nav-link hover:text-accent transition-colors py-1"
-            >The Rates</a
-          >
-          <a
-            href="https://wa.me/9779816916916"
-            class="mt-2 inline-block px-8 py-3 bg-accent text-white rounded-full text-center hover:bg-purple-600 transition-all w-full text-center"
-          >
-            Let's Talk
-          </a>
-        </div>
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#story">My Story</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#brands">Brands</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </div>
-    </nav>
+    </header>
 
-    <!-- ═══════════════════════════════════════════
-         HERO
-    ═══════════════════════════════════════════ -->
-    <section
-      id="home"
-      class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 pb-20 overflow-hidden"
-    >
-      <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full purple-glow-bg pointer-events-none"
-      ></div>
-      <div class="relative z-10 max-w-5xl">
-        <div
-          class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-widest uppercase mb-12"
-        >
-          <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-          <span>Based in Nepal • Open for Projects</span>
-        </div>
-        <h1
-          class="hero-title text-6xl md:text-9xl font-extrabold leading-[0.85] tracking-tighter mb-8"
-        >
-          DESIGN. <br />
-          BUILD. <br />
-          <span class="text-gradient italic">GROW.</span>
-        </h1>
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
 
-        <p
-          class="hero-p text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12"
-        >
-          Websites and brand identities for businesses that want to look as
-          credible online as they are in person.
-        </p>
-        <div class="hero-btns flex flex-col sm:flex-row gap-5 justify-center">
-          <a
-            href="#projects"
-            class="bg-accent text-white px-10 py-4 rounded-full font-bold shadow-lg shadow-accent/20 hover:scale-105 transition-transform"
-            >VIEW PROJECTS</a
-          >
-          <a
-            href="#about"
-            class="border border-white/10 bg-white/5 backdrop-blur-md px-10 py-4 rounded-full font-bold hover:bg-white/10 transition-all"
-            >KNOW ME MORE</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         ABOUT
-    ═══════════════════════════════════════════ -->
-    <section id="about" class="py-32 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div class="relative group">
-            <div
-              class="absolute -inset-4 bg-accent/20 rounded-2xl blur-xl group-hover:bg-accent/30 transition duration-500"
-            ></div>
-            <div
-              class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-gray-800 border border-white/10"
-            >
-              <img
-                src="./img/wife&me&furry (1).jpg"
-                alt="Nunam Rai with his wife and dogs — creative developer and designer based in Nepal"
-                class="object-cover w-full h-full grayscale hover:grayscale-0 transition duration-700 ease-in-out"
-                loading="lazy"
-                width="800"
-                height="1000"
-              />
-            </div>
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+          <div class="flex items-center gap-3 mb-8 reveal">
+            <span class="availability-dot animate-pulse"></span>
+            <span class="text-xs text-gray-400 tracking-wide">
+              Available for selected projects
+            </span>
           </div>
-          <div>
-            <h2
-              class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4"
-            >
-              The Story So Far
-            </h2>
-            <h3 class="text-4xl md:text-5xl font-bold tracking-tighter mb-8">
-              BEYOND THE <br /><span class="italic text-gray-500"
-                >PIXELS & CODE.</span
-              >
-            </h3>
-            <div class="space-y-6">
-              <p class="text-xl text-gray-300 leading-relaxed">
-                I've been incredibly lucky to build a life that balances
-                high-end tech with the things that truly matter.
-              </p>
-              <p class="text-gray-400 leading-relaxed">
-                When I'm not architecting digital solutions, I'm surrounded by
-                my beautiful wife and a pack of furry friends — honestly, the
-                best co-workers a dev could ask for.
-              </p>
-              <p
-                class="text-gray-400 leading-relaxed text-lg italic border-l-2 border-accent pl-6"
-              >
-                "Helping brands shine isn't just a job; it's about bringing a
-                touch of soul to the digital space."
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ═══════════════════════════════════════════
-         MARQUEE (client ticker) — slower for readability
-    ═══════════════════════════════════════════ -->
-    <section
-      class="py-20 border-y border-white/5 bg-white/[0.02] overflow-hidden"
-    >
-      <div class="relative flex overflow-x-hidden group">
-        <div class="flex animate-marquee whitespace-nowrap items-center py-4">
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >Pizza Ghar</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter italic uppercase cursor-default"
-            >Puran Murti Nepal</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter italic uppercase cursor-default"
-            >Dallu's Momo</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter italic uppercase cursor-default"
-            >Himal Foodstore</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >Mission USA Education</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >New Quality Computer Trade</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >Advibe 360
-          </span>
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >TTKH</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter italic uppercase cursor-default"
-            >SPS</span
-          >
-        </div>
-        <div
-          class="absolute top-0 flex animate-marquee2 whitespace-nowrap items-center py-4"
-        >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >Pizza Ghar</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >Mission USA Education</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >New Quality Computer Trade</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >Advibe 360</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter italic uppercase cursor-default"
-            >Dallu's Momo</span
-          >
-          <span
-            class="mx-12 opacity-30 hover:opacity-100 transition-all text-3xl font-black tracking-tighter uppercase cursor-default"
-            >Himal Food Store</span
-          >
-        </div>
-      </div>
-    </section>
+          <p class="section-label mb-6 reveal">Freelancer · Nepal</p>
 
-    <!-- ═══════════════════════════════════════════
-         SKILLS
-    ═══════════════════════════════════════════ -->
-    <section
-      id="skills"
-      class="py-32 relative border-t border-white/5 bg-darker"
-    >
-      <div class="max-w-7xl mx-auto px-6">
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
-        >
-          <div class="max-w-xl">
-            <h2
-              class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4"
-            >
-              Expertise
-            </h2>
-            <h3 class="text-4xl md:text-6xl font-bold tracking-tighter">
-              THE <span class="italic text-gradient">ARSENAL</span> I TRUST.
-            </h3>
-          </div>
-          <p class="text-gray-500 text-sm max-w-xs pb-2 font-medium">
-            A curated selection of modern technologies and creative tools I use
-            to build high-performance digital experiences.
-          </p>
-        </div>
+          <h1 class="hero-title reveal">
+            Creative<br />
+            <span class="gradient-text">Developer</span><br />
+            & Designer<span class="accent">.</span>
+          </h1>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden"
-        >
-          <!-- Development -->
           <div
-            class="bg-darker p-6 md:p-10 hover:bg-white/[0.03] transition-all group"
+            class="mt-9 flex flex-col md:flex-row md:items-end justify-between gap-10 reveal"
           >
-            <div class="mb-8 md:mb-10">
-              <span
-                class="text-[10px] font-black tracking-[0.4em] uppercase border border-accent/30 text-accent px-4 py-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-all"
-                >Development</span
-              >
-            </div>
-            <ul class="space-y-4 md:space-y-6">
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Laravel / PHP</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Backend</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Filament PHP</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Admin / ERP</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Livewire</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Reactive</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Alpine JS</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Frontend</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Tailwind CSS</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Design</span
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Creative -->
-          <div
-            class="bg-darker p-6 md:p-10 hover:bg-white/[0.03] transition-all group"
-          >
-            <div class="mb-8 md:mb-10">
-              <span
-                class="text-[10px] font-black tracking-[0.4em] uppercase border border-accent/30 text-accent px-4 py-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-all"
-                >Creative</span
-              >
-            </div>
-            <ul class="space-y-4 md:space-y-6">
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Figma / XD</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >UI/UX</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Adobe Illustrator</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Branding</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Premiere Pro</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Video</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">After Effects</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Motion</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Photoshop</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Visuals</span
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Growth -->
-          <div
-            class="bg-darker p-6 md:p-10 hover:bg-white/[0.03] transition-all group"
-          >
-            <div class="mb-8 md:mb-10">
-              <span
-                class="text-[10px] font-black tracking-[0.4em] uppercase border border-accent/30 text-accent px-4 py-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-all"
-                >Growth</span
-              >
-            </div>
-            <ul class="space-y-4 md:space-y-6">
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Meta & Google Ads</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Ads Run</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">SEO Architecture</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Search</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Google Analytics</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Data</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">GSC / Pixels</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Tracking</span
-                >
-              </li>
-              <li
-                class="flex justify-between items-center border-b border-white/5 pb-3"
-              >
-                <span class="text-base md:text-lg">Social Strategy</span>
-                <span class="text-gray-600 text-[9px] font-bold uppercase"
-                  >Reach</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         PROJECTS
-    ═══════════════════════════════════════════ -->
-    <section id="projects" class="py-32">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="mb-20">
-          <h2 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
-            SELECTED WORK
-          </h2>
-          <div class="h-1 w-20 bg-accent"></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-16">
-          <!-- ttkh Website -->
-          <div class="project-card group">
-            <div
-              class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card border border-white/5 mb-8"
-            >
-              <img
-                class="w-full h-full object-cover"
-                src="./img/ttkh.png"
-                alt="TTKH website built with TALL stack — Laravel, Livewire, Alpine.js, Tailwind CSS by Nunam Rai"
-                loading="lazy"
-                width="800"
-                height="500"
-              />
-              <div
-                class="absolute inset-0 bg-accent/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4 backdrop-blur-sm"
-              >
-                <a
-                  href="https://ttkh.edu.np/"
-                  target="_blank"
-                  rel="noopener"
-                  class="px-7 py-3 bg-white text-black font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
-                >
-                  Visit Site
-                </a>
-                <!-- <a
-                  href="#ttkh-case"
-                  class="px-7 py-3 bg-black/60 border border-white/30 text-white font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
-                >
-                  Case Study
-                </a> -->
-              </div>
-            </div>
-            <div class="flex justify-between items-start gap-4">
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold mb-1">TTKH Website</h3>
-                <p
-                  class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-3"
-                >
-                  TALL Stack / SEO
-                </p>
-                <p class="text-gray-400 text-sm leading-relaxed max-w-md">
-                  cutely crafted a high-performance TALL stack website for TTKH,
-                  blending seamless user experience with strategic SEO to boost
-                  their online presence and organic traffic.
-                </p>
-                <div class="mt-4 flex flex-wrap gap-2">
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Laravel</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Filament</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Livewire</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >SEO</span
-                  >
-                </div>
-              </div>
-              <span class="text-accent font-bold text-xs tracking-tighter"
-                >2026</span
-              >
-            </div>
-          </div>
-
-          <!-- takumi Website -->
-          <div class="project-card group">
-            <div
-              class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card border border-white/5 mb-8"
-            >
-              <img
-                class="w-full h-full object-cover"
-                src="./img/jec.png"
-                alt="JEC Nepal website built with TALL stack — Laravel, Livewire, Alpine.js, Tailwind CSS by Nunam Rai"
-                loading="lazy"
-                width="800"
-                height="500"
-              />
-              <div
-                class="absolute inset-0 bg-accent/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4 backdrop-blur-sm"
-              >
-                <a
-                  href="https://jecnepal.edu.np/"
-                  target="_blank"
-                  rel="noopener"
-                  class="px-7 py-3 bg-white text-black font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
-                >
-                  Visit Site
-                </a>
-                <!-- <a
-                  href="#takumi-case"
-                  class="px-7 py-3 bg-black/60 border border-white/30 text-white font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
-                >
-                  Case Study
-                </a> -->
-              </div>
-            </div>
-            <div class="flex justify-between items-start gap-4">
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold mb-1">JEC Nepal Website</h3>
-                <p
-                  class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-3"
-                >
-                  TALL Stack / SEO
-                </p>
-                <p class="text-gray-400 text-sm leading-relaxed max-w-md">
-                  Elevated their digital identity by merging high-performance
-                  TALL stack engineering with premium UI/UX, ensuring the brand
-                  ranks effectively and converts organic traffic.
-                </p>
-                <div class="mt-4 flex flex-wrap gap-2">
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Laravel</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Filament</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Livewire</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >SEO</span
-                  >
-                </div>
-              </div>
-              <span class="text-accent font-bold text-xs tracking-tighter"
-                >2026</span
-              >
-            </div>
-          </div>
-
-          <!-- Mission Abroad Website -->
-          <div class="project-card group">
-            <div
-              class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card border border-white/5 mb-8"
-            >
-              <img
-                class="w-full h-full object-cover"
-                src="./img/mission-abroad.png"
-                alt="Mission Abroad education consultancy website built with TALL stack and SEO architecture by Nunam Rai"
-                loading="lazy"
-                width="800"
-                height="500"
-              />
-              <div
-                class="absolute inset-0 bg-accent/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4 backdrop-blur-sm"
-              >
-                <a
-                  href="https://missionabroad.edu.np/"
-                  target="_blank"
-                  rel="noopener"
-                  class="px-7 py-3 bg-white text-black font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
-                >
-                  Visit Site
-                </a>
-                <!-- <a
-                  href="#missionabroad-case"
-                  class="px-7 py-3 bg-black/60 border border-white/30 text-white font-bold rounded-full scale-90 group-hover:scale-100 transition-transform"
-                >
-                  Case Study
-                </a> -->
-              </div>
-            </div>
-            <div class="flex justify-between items-start gap-4">
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold mb-1">Mission Abroad Website</h3>
-                <p
-                  class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-3"
-                >
-                  TALL Stack / SEO
-                </p>
-                <p class="text-gray-400 text-sm leading-relaxed max-w-md">
-                  Established global credibility through a sophisticated,
-                  responsive design and performance-first development, creating
-                  a seamless gateway for their international clientele.
-                </p>
-                <div class="mt-4 flex flex-wrap gap-2">
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Laravel</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Filament</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >Tailwind</span
-                  >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 border border-white/10 rounded-full text-gray-500"
-                    >SEO</span
-                  >
-                </div>
-              </div>
-              <span class="text-accent font-bold text-xs tracking-tighter"
-                >2026</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         BRANDS
-    ═══════════════════════════════════════════ -->
-    <section id="brands" class="py-32 bg-darker border-t border-white/5">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="mb-20 text-center">
-          <h2 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
-            BRANDS I <span class="text-accent italic">GROW</span>
-          </h2>
-          <p class="text-gray-500 max-w-2xl mx-auto">
-            Not just designs — I manage, scale, and grow brand presence across
-            social platforms with real results.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <!-- Tiny Tots -->
-          <div
-            class="p-8 rounded-2xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all"
-          >
-            <h3 class="text-2xl font-bold mb-2">Tiny Tots Kinder Home</h3>
-            <p
-              class="text-sm text-accent mb-4 font-bold uppercase tracking-widest"
-            >
-              <!-- Featured Project -->
+            <p class="hero-intro">
+              I'm Nunam Rai — a freelance graphic designer and web developer
+              focused on creating thoughtful visual identities and building
+              modern digital experiences for growing brands.
             </p>
-            <p class="text-gray-400 text-sm mb-6">
-              Complete brand growth including content strategy, admissions
-              campaigns, and social presence management. Built strong local
-              trust and consistent engagement.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/tinytotsbirtamode/"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
+
+            <div class="flex flex-wrap gap-3">
+              <a href="#projects" class="accent-button"
+                >Explore My Work <span>↗</span></a
               >
               <a
-                href="https://www.instagram.com/ttkh_official"
+                href="https://wa.me/9779816916916"
                 target="_blank"
-                rel="noopener"
-                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
-                >Instagram</a
+                rel="noopener noreferrer"
+                class="outline-button"
+                >Let's Talk ↗</a
               >
             </div>
           </div>
 
-          <!-- Shishu Pragya Sadan -->
           <div
-            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
-          >
-            <h3 class="text-xl font-bold mb-2">Shishu Pragya Sadan School</h3>
-            <p class="text-gray-400 text-sm mb-6">
-              Enhancing digital presence for an established educational
-              institution by creating structured, informative, and engaging
-              content that builds trust among parents and the local community.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/Shishupragyasadanschool"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
-              >
-              <a
-                href="https://www.instagram.com/shishu_pragya_sadan"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
-                >Instagram</a
-              >
-            </div>
-          </div>
-
-          <!-- Puran Murti -->
-          <div
-            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
-          >
-            <h3 class="text-xl font-bold mb-2">Puran Murti-Nepal</h3>
-            <p class="text-gray-400 text-sm mb-6">
-              Driving student engagement and admissions through strategic
-              branding, promotional creatives, and consistent content tailored
-              for academic growth and credibility.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/puranmurtinepal"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
-              >
-              <a
-                href="https://www.instagram.com/puranmurti_nepal"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
-                >Instagram</a
-              >
-            </div>
-          </div>
-
-          <!-- Dallus Momo -->
-          <div
-            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
-          >
-            <h3 class="text-xl font-bold mb-2">Dallus Momo</h3>
-            <p class="text-gray-500 text-xs uppercase mb-4">UK Based Brand</p>
-            <p class="text-gray-400 text-sm mb-6">
-              Building strong food brand identity with scroll-stopping visuals
-              and engaging content for international Nepali audiences.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/dallusmomo"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
-              >
-              <a
-                href="https://instagram.com/dallus_momo"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
-                >Instagram</a
-              >
-            </div>
-          </div>
-
-          <!-- Mission USA -->
-          <div
-            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
-          >
-            <h3 class="text-xl font-bold mb-2">Mission USA Education</h3>
-            <p class="text-gray-400 text-sm mb-6">
-              Driving student inquiries through targeted content, branding, and
-              performance-focused social campaigns.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/missionusa/"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
-              >
-              <a
-                href="https://www.instagram.com/mission_usa_education"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
-                >Instagram</a
-              >
-            </div>
-          </div>
-
-          <!-- New York Education -->
-          <div
-            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
-          >
-            <h3 class="text-xl font-bold mb-2">New Quality Computer Trade</h3>
-            <p class="text-gray-400 text-sm mb-6">
-              Maintaining a strong local presence through consistent social
-              media management, creative campaigns, and engaging content that
-              resonates with the community.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/nqcts"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
-              >
-              <!-- <a
-                href="https://www.instagram.com/newyork_edu"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
-                >Instagram</a
-              > -->
-            </div>
-          </div>
-
-          <!-- Pizza Ghar -->
-          <div
-            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
-          >
-            <h3 class="text-xl font-bold mb-2">Pizza Ghar</h3>
-            <p class="text-gray-400 text-sm mb-6">
-              Designed engaging creatives and campaigns to strengthen brand
-              recall and local reach.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/PizzzaGhar/"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
-              >
-            </div>
-          </div>
-
-          <!-- Himal Food Store -->
-          <div
-            class="p-8 rounded-2xl border border-white/10 bg-card hover:bg-white/[0.03] transition-all"
-          >
-            <h3 class="text-xl font-bold mb-2">Himal Food Store</h3>
-            <p class="text-gray-500 text-xs uppercase mb-4">UK Based Brand</p>
-            <p class="text-gray-400 text-sm mb-6">
-              Managing international brand presence with engaging product
-              visuals and content strategy tailored for Nepali audiences abroad.
-            </p>
-            <div class="flex gap-3">
-              <a
-                href="https://www.facebook.com/himalfoodstore/"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition"
-                >Facebook</a
-              >
-              <a
-                href="https://www.instagram.com/himalfoodstore"
-                target="_blank"
-                rel="noopener"
-                class="px-5 py-2 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition"
-                >Instagram</a
-              >
-            </div>
-          </div>
-
-          <!-- Your Brand Here -->
-          <div
-            class="p-8 rounded-2xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all flex flex-col justify-between"
+            class="mt-20 pt-7 border-t border-white/10 flex flex-wrap gap-10 text-xs text-gray-500 reveal"
           >
             <div>
-              <h3 class="text-xl font-bold mb-2">Your Brand Here</h3>
-              <p
-                class="text-accent text-xs uppercase font-bold mb-4 tracking-widest"
-              >
-                Let's Build Something
+              <span class="text-white text-lg font-bold">3+</span><br />Years
+              Experience
+            </div>
+            <div>
+              <span class="text-white text-lg font-bold">Web</span
+              ><br />Development
+            </div>
+            <div>
+              <span class="text-white text-lg font-bold">Graphic</span
+              ><br />Design
+            </div>
+            <div>
+              <span class="text-white text-lg font-bold">Digital</span
+              ><br />Experiences
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+              <p class="section-label mb-5">01 / About Me</p>
+              <h2 class="section-heading">
+                Turning ideas into<br />
+                <span class="gradient-text">digital reality.</span>
+              </h2>
+            </div>
+
+            <div class="reveal">
+              <p class="text-gray-400 text-sm leading-8">
+                I'm Nunam Rai, a freelancer working across graphic design and
+                web development. I enjoy combining visual creativity with
+                practical technology to create work that looks good, feels
+                intuitive and serves a clear purpose.
               </p>
-              <p class="text-gray-400 text-sm mb-6">
-                Want your brand to stand here? I help businesses grow through
-                design, development, and social media strategy that actually
-                brings results — not just posts.
+
+              <p class="text-gray-400 text-sm leading-8 mt-5">
+                From business websites and landing pages to social media
+                creatives and brand presentation, I work with businesses to
+                build a consistent and meaningful digital presence.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mt-9">
+                <div class="about-card">
+                  <p class="text-3xl font-bold gradient-text">03+</p>
+                  <p class="text-xs text-gray-500 mt-2">Years of experience</p>
+                </div>
+                <div class="about-card">
+                  <p class="text-3xl font-bold gradient-text">Creative</p>
+                  <p class="text-xs text-gray-500 mt-2">Design approach</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERSONAL STORY -->
+      <section id="story" class="section-padding border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+            <div class="story-image-wrap reveal">
+              <img
+                src="./img/wife&me&furry (1).jpg"
+                alt="Nunam Rai with his wife and furry family"
+                class="story-image"
+                loading="lazy"
+              />
+              <div class="story-caption">
+                My favourite people. My favourite life.
+              </div>
+            </div>
+
+            <div class="reveal">
+              <p class="section-label mb-5">The Story So Far</p>
+
+              <h2 class="section-heading uppercase">
+                Beyond the<br />
+                <span class="gradient-text italic">pixels & code.</span>
+              </h2>
+
+              <div class="mt-8 space-y-5 story-copy">
+                <p>
+                  I've been incredibly lucky to build a life that balances
+                  high-end tech with the things that truly matter.
+                </p>
+
+                <p>
+                  When I'm not architecting digital solutions, I'm surrounded by
+                  my beautiful wife and a pack of furry friends — honestly, the
+                  best co-workers a dev could ask for.
+                </p>
+              </div>
+
+              <blockquote class="story-quote mt-9">
+                "Helping brands shine isn't just a job; it's about bringing a
+                touch of soul to the digital space."
+              </blockquote>
+
+              <p class="text-xs text-gray-600 mt-8 tracking-widest uppercase">
+                A little bit of life beyond the screen.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <section class="marquee">
+        <div class="marquee-track">
+          <span class="marquee-item">WEB DEVELOPMENT ✳</span>
+          <span class="marquee-item">GRAPHIC DESIGN ✳</span>
+          <span class="marquee-item">BRAND IDENTITY ✳</span>
+          <span class="marquee-item">DIGITAL EXPERIENCES ✳</span>
+          <span class="marquee-item">WEB DEVELOPMENT ✳</span>
+          <span class="marquee-item">GRAPHIC DESIGN ✳</span>
+          <span class="marquee-item">BRAND IDENTITY ✳</span>
+          <span class="marquee-item">DIGITAL EXPERIENCES ✳</span>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="mb-12 reveal">
+            <p class="section-label mb-5">02 / Capabilities</p>
+            <h2 class="section-heading">
+              Things I do <span class="gradient-text">best.</span>
+            </h2>
+            <p class="text-muted text-sm mt-5 max-w-xl leading-7">
+              A combination of creative thinking, visual communication and
+              development skills to bring ideas to life.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="skill-card reveal">
+              <span class="skill-number">01</span>
+              <h3 class="font-bold mt-6">Web Development</h3>
+              <p class="text-xs text-muted leading-6 mt-3">
+                Responsive, functional and modern websites built around business
+                needs.
+              </p>
+            </div>
+
+            <div class="skill-card reveal">
+              <span class="skill-number">02</span>
+              <h3 class="font-bold mt-6">Graphic Design</h3>
+              <p class="text-xs text-muted leading-6 mt-3">
+                Social media creatives, promotional graphics and digital
+                communication.
+              </p>
+            </div>
+
+            <div class="skill-card reveal">
+              <span class="skill-number">03</span>
+              <h3 class="font-bold mt-6">Brand Presentation</h3>
+              <p class="text-xs text-muted leading-6 mt-3">
+                Visual direction and consistent presentation for businesses and
+                brands.
+              </p>
+            </div>
+
+            <div class="skill-card reveal">
+              <span class="skill-number">04</span>
+              <h3 class="font-bold mt-6">SEO & Optimization</h3>
+              <p class="text-xs text-muted leading-6 mt-3">
+                Search-friendly structure, performance improvements and website
+                essentials.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section-padding project-section">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="project-toolbar reveal">
+            <div>
+              <p class="section-label mb-5">03 / Selected Work</p>
+              <h2 class="section-heading">
+                Projects & <span class="gradient-text">Experiments.</span>
+              </h2>
+              <p class="text-muted text-sm mt-4">
+                A selection of websites and digital projects I've worked on.
+              </p>
+            </div>
+
+            <div class="project-controls">
+              <button
+                class="slider-btn"
+                id="projectPrev"
+                aria-label="Previous projects"
+              >
+                ←
+              </button>
+              <button
+                class="slider-btn"
+                id="projectNext"
+                aria-label="Next projects"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          <div class="project-slider reveal" id="projectSlider">
+            <a
+              class="project-card"
+              href="https://ttkh.edu.np/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="project-image">
+                <img src="./img/ttkh.png" alt="TTKH website" loading="lazy" />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">↗</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Education · Website</span>
+                <h3 class="project-title">TTKH Website</h3>
+                <p class="project-description">
+                  A modern educational website with a structured content
+                  experience and search-friendly foundation.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Laravel</span>
+                  <span class="project-tag">Filament</span>
+                  <span class="project-tag">Livewire</span>
+                  <span class="project-tag">SEO</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="https://jecnepal.edu.np/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="project-image">
+                <img
+                  src="./img/jec.png"
+                  alt="JEC Nepal website"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">↗</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Education · Website</span>
+                <h3 class="project-title">JEC Nepal Website</h3>
+                <p class="project-description">
+                  A professional web presence designed to present institutional
+                  information clearly.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Laravel</span>
+                  <span class="project-tag">Filament</span>
+                  <span class="project-tag">Livewire</span>
+                  <span class="project-tag">SEO</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="https://missionabroad.edu.np/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="project-image">
+                <img
+                  src="./img/mission-abroad.png"
+                  alt="Mission Abroad website"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">↗</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Consultancy · Website</span>
+                <h3 class="project-title">Mission Abroad</h3>
+                <p class="project-description">
+                  A clean consultancy website designed to communicate services
+                  and study destinations.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Laravel</span>
+                  <span class="project-tag">Filament</span>
+                  <span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">SEO</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-pending"
+              href="#"
+              aria-disabled="true"
+            >
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80"
+                  alt="Vajra Event project"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">Coming Soon</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Events · Website</span>
+                <h3 class="project-title">Vajra Event</h3>
+                <p class="project-description">
+                  A bold digital presence for live events, concerts and
+                  memorable experiences.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Web Design</span>
+                  <span class="project-tag">Development</span>
+                  <span class="project-tag">Branding</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-pending"
+              href="#"
+              aria-disabled="true"
+            >
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80"
+                  alt="Downtown Abroad Education project"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">Coming Soon</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Education · Website</span>
+                <h3 class="project-title">Downtown Abroad Education</h3>
+                <p class="project-description">
+                  A dynamic education consultancy website with destination
+                  information and content management.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Laravel</span>
+                  <span class="project-tag">Filament</span>
+                  <span class="project-tag">CMS</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-pending"
+              href="#"
+              aria-disabled="true"
+            >
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80"
+                  alt="World Rising Consultancy project"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">Coming Soon</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Consultancy · Website</span>
+                <h3 class="project-title">World Rising Consultancy</h3>
+                <p class="project-description">
+                  A contemporary consultancy website focused on clear
+                  communication and a polished brand experience.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Web Design</span>
+                  <span class="project-tag">Development</span>
+                  <span class="project-tag">SEO</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-pending"
+              href="#"
+              aria-disabled="true"
+            >
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80"
+                  alt="Siddha Baraha Consultancy project"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">Coming Soon</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Consultancy · Website</span>
+                <h3 class="project-title">Siddha Baraha Consultancy</h3>
+                <p class="project-description">
+                  A professional web presentation for consultancy services and
+                  business information.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Web Design</span>
+                  <span class="project-tag">Development</span>
+                  <span class="project-tag">Responsive</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-pending"
+              href="#"
+              aria-disabled="true"
+            >
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80"
+                  alt="Kadak Chiya project"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">Coming Soon</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Food & Beverage · Website</span>
+                <h3 class="project-title">Kadak Chiya</h3>
+                <p class="project-description">
+                  A distinctive digital presentation for a tea and hospitality
+                  brand.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Branding</span>
+                  <span class="project-tag">Web Design</span>
+                  <span class="project-tag">Development</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-pending"
+              href="#"
+              aria-disabled="true"
+            >
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=900&q=80"
+                  alt="Dallu's Momo project"
+                  loading="lazy"
+                />
+                <div class="project-overlay"></div>
+                <span class="project-arrow">Coming Soon</span>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Restaurant · Website</span>
+                <h3 class="project-title">Dallu's Momo</h3>
+                <p class="project-description">
+                  A food-focused website experience showcasing Nepali momos and
+                  restaurant ordering options.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Restaurant</span>
+                  <span class="project-tag">Web Design</span>
+                  <span class="project-tag">Responsive</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="slider-progress">
+            <div class="slider-progress-bar" id="sliderProgress"></div>
+          </div>
+
+          <div
+            class="flex justify-between items-center mt-5 text-xs text-gray-500"
+          >
+            <span>Drag or scroll to explore projects</span>
+            <span>09 Selected Projects</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRANDS I GROW -->
+      <section id="brands" class="section-padding border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="mb-12 reveal">
+            <p class="section-label mb-5">04 / The People Behind the Work</p>
+            <h2 class="section-heading">
+              Brands I <span class="gradient-text">grow.</span>
+            </h2>
+            <p class="text-muted text-sm mt-5 max-w-xl leading-7">
+              Building digital presence, shaping visual identities and helping
+              businesses communicate their stories with confidence.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="brand-card reveal">
+              <div>
+                Mission USA Education<span>Education & Consultancy</span>
+              </div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Newyork Education<span>Education & Consultancy</span></div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Shishu Pragya Sadan<span>Education</span></div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Dallu's Momo<span>Food & Hospitality</span></div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Himal Foodstore<span>Food & Retail</span></div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Kadak Chiya<span>Food & Beverage</span></div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Pizza Ghar<span>Food & Hospitality</span></div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Mero Media<span>Media & Creative</span></div>
+            </div>
+
+            <div class="brand-card reveal">
+              <div>Vajra Event<span>Events & Entertainment</span></div>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-600 mt-7 reveal">
+            Brand logos and individual brand links can be added here as they
+            become available.
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="mb-12 reveal">
+            <p class="section-label mb-5">05 / What I Offer</p>
+            <h2 class="section-heading">
+              Creative solutions<br />
+              for <span class="gradient-text">growing brands.</span>
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="service-card reveal">
+              <div class="service-icon">⌘</div>
+              <h3 class="font-bold text-lg mt-7">Website Development</h3>
+              <p class="text-muted text-xs leading-7 mt-3">
+                Custom responsive websites designed to give your business a
+                professional online presence.
+              </p>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">✳</div>
+              <h3 class="font-bold text-lg mt-7">Graphic Design</h3>
+              <p class="text-muted text-xs leading-7 mt-3">
+                Creative social media graphics and promotional materials that
+                communicate your brand clearly.
+              </p>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">◈</div>
+              <h3 class="font-bold text-lg mt-7">Brand Identity</h3>
+              <p class="text-muted text-xs leading-7 mt-3">
+                Consistent visual presentation and design direction to help your
+                business stand apart.
+              </p>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">↗</div>
+              <h3 class="font-bold text-lg mt-7">SEO Optimization</h3>
+              <p class="text-muted text-xs leading-7 mt-3">
+                Search-friendly website structure and essential optimization for
+                better discoverability.
+              </p>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">◎</div>
+              <h3 class="font-bold text-lg mt-7">Social Media Management</h3>
+              <p class="text-muted text-xs leading-7 mt-3">
+                Creative content and consistent page presentation for your
+                business social platforms.
+              </p>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">✦</div>
+              <h3 class="font-bold text-lg mt-7">Digital Consultation</h3>
+              <p class="text-muted text-xs leading-7 mt-3">
+                Practical guidance to improve your brand's digital presence and
+                online communication.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="section-padding border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-14 reveal">
+            <p class="section-label mb-5">06 / Working Together</p>
+            <h2 class="section-heading">
+              Simple ways to <span class="gradient-text">work together.</span>
+            </h2>
+            <p class="text-muted text-sm mt-5 max-w-xl mx-auto leading-7">
+              Every project is different. Let's discuss your requirements and
+              find the right approach for your business.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-5">
+            <div class="pricing-card reveal">
+              <p class="text-xs text-gray-500 uppercase tracking-widest">
+                01 / Design
+              </p>
+              <h3 class="text-2xl font-bold mt-5">Graphic Design</h3>
+              <p class="text-muted text-xs mt-3 leading-6">
+                Creative visuals that make your business communication
+                consistent.
+              </p>
+              <div class="border-t border-white/10 my-7"></div>
+              <div class="space-y-4">
+                <p class="pricing-feature">Social media creatives</p>
+                <p class="pricing-feature">Promotional graphics</p>
+                <p class="pricing-feature">Campaign design</p>
+                <p class="pricing-feature">Brand-focused visuals</p>
+              </div>
+              <a
+                href="https://wa.me/9779816916916?text=Hi%20Nunam%2C%20I%27m%20interested%20in%20graphic%20design."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="outline-button w-full mt-9"
+                >Discuss Your Project ↗</a
+              >
+            </div>
+
+            <div class="pricing-card featured reveal">
+              <p class="text-xs accent uppercase tracking-widest">
+                02 / Development
+              </p>
+              <h3 class="text-2xl font-bold mt-5">Website Design</h3>
+              <p class="text-muted text-xs mt-3 leading-6">
+                Modern, responsive websites tailored to your brand and business
+                goals.
+              </p>
+              <div class="border-t border-white/10 my-7"></div>
+              <div class="space-y-4">
+                <p class="pricing-feature">Custom website design</p>
+                <p class="pricing-feature">Mobile responsive layouts</p>
+                <p class="pricing-feature">SEO-friendly structure</p>
+                <p class="pricing-feature">Contact and social integration</p>
+              </div>
+              <a
+                href="https://wa.me/9779816916916?text=Hi%20Nunam%2C%20I%27m%20interested%20in%20a%20website%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="accent-button w-full mt-9"
+                >Start a Website Project ↗</a
+              >
+            </div>
+
+            <div class="pricing-card reveal">
+              <p class="text-xs text-gray-500 uppercase tracking-widest">
+                03 / Management
+              </p>
+              <h3 class="text-2xl font-bold mt-5">Digital Presence</h3>
+              <p class="text-muted text-xs mt-3 leading-6">
+                Ongoing creative support for your business's online presence.
+              </p>
+              <div class="border-t border-white/10 my-7"></div>
+              <div class="space-y-4">
+                <p class="pricing-feature">Social media management</p>
+                <p class="pricing-feature">Creative content support</p>
+                <p class="pricing-feature">Google Business Profile</p>
+                <p class="pricing-feature">Digital brand consistency</p>
+              </div>
+              <a
+                href="https://wa.me/9779816916916?text=Hi%20Nunam%2C%20I%27d%20like%20to%20discuss%20digital%20presence%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="outline-button w-full mt-9"
+                >Let's Discuss ↗</a
+              >
+            </div>
+          </div>
+
+          <p class="text-center text-xs text-gray-600 mt-7">
+            Pricing is based on project scope and requirements. Contact me for a
+            custom quotation.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="contact-panel reveal">
+            <div class="relative z-10 max-w-3xl">
+              <p class="section-label mb-6">07 / Have a project in mind?</p>
+
+              <h2 class="section-heading">
+                Let's create something<br />
+                <span class="gradient-text">meaningful together.</span>
+              </h2>
+
+              <p class="text-muted text-sm leading-7 mt-7 max-w-xl">
+                Have an idea, a business to grow or a project you'd like to
+                discuss? I'd love to hear about it. Let's make it happen.
+              </p>
+
+              <div class="flex flex-wrap gap-3 mt-9">
+                <a
+                  href="https://wa.me/9779816916916"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="accent-button"
+                >
+                  Chat on WhatsApp ↗
+                </a>
+
+                <a
+                  href="https://www.behance.net/nunamrai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="outline-button"
+                >
+                  View My Work ↗
+                </a>
+              </div>
+
+              <p class="text-xs text-gray-500 mt-5">
+                WhatsApp: +977 9816916916
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row justify-between gap-10">
+          <div>
+            <a href="#home" class="text-xl font-extrabold tracking-tight">
+              nunam<span class="accent">.</span>
+            </a>
+            <p class="text-xs text-gray-500 mt-3 max-w-xs leading-6">
+              Creative developer and designer building meaningful digital
+              experiences.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs font-bold text-white mb-4">Explore</p>
+            <div class="flex flex-col gap-3">
+              <a class="footer-link" href="#about">About</a>
+              <a class="footer-link" href="#story">My Story</a>
+              <a class="footer-link" href="#projects">Projects</a>
+              <a class="footer-link" href="#brands">Brands I Grow</a>
+              <a class="footer-link" href="#services">Services</a>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-xs font-bold text-white mb-4">Find Me Online</p>
+            <div class="flex flex-col gap-3">
+              <a
+                class="social-link"
+                href="https://www.facebook.com/nunama.ra.i/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Facebook ↗</a
+              >
+              <a
+                class="social-link"
+                href="https://www.instagram.com/nunamrai0405/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram ↗</a
+              >
+              <a
+                class="social-link"
+                href="https://www.behance.net/nunamrai"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Behance ↗</a
+              >
+              <a
+                class="social-link"
+                href="https://github.com/nunamrai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              >
+              <a
+                class="social-link"
+                href="https://www.pinterest.com/bob_studio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pinterest ↗</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <p class="text-xs font-bold text-white mb-4">Let's Connect</p>
             <a
               href="https://wa.me/9779816916916"
               target="_blank"
-              rel="noopener"
-              class="px-5 py-2 bg-white text-black rounded-full text-xs font-bold hover:bg-accent hover:text-white transition w-fit"
+              rel="noopener noreferrer"
+              class="accent-button"
             >
-              Contact Me
+              WhatsApp Me ↗
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         SERVICES
-    ═══════════════════════════════════════════ -->
-    <section id="services" class="py-32 bg-black/40">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20">
-          <div>
-            <h2
-              class="text-4xl md:text-5xl font-bold tracking-tighter sticky top-32"
-            >
-              I HELP BRANDS <br />
-              <span class="text-accent">TRANSCEND</span> THE NOISE.
-            </h2>
-          </div>
-          <div class="space-y-12">
-            <div
-              class="service-item border-b border-white/10 pb-8 hover:border-accent transition-colors duration-500"
-            >
-              <div class="flex justify-between items-start mb-4">
-                <h4 class="text-xl font-bold">Web Development</h4>
-                <span class="text-accent text-xs font-mono">01</span>
-              </div>
-              <p class="text-gray-500 leading-relaxed">
-                Building scalable, reactive web applications and
-                high-performance backends using the
-                <strong>TALL stack</strong> and <strong>Filament PHP</strong>.
-              </p>
-            </div>
-
-            <div
-              class="service-item border-b border-white/10 pb-8 hover:border-accent transition-colors duration-500"
-            >
-              <div class="flex justify-between items-start mb-4">
-                <h4 class="text-xl font-bold">Branding & Visual Identity</h4>
-                <span class="text-accent text-xs font-mono">02</span>
-              </div>
-              <p class="text-gray-500 leading-relaxed">
-                Crafting distinctive logos and visual systems that define your
-                brand's personality across all digital touchpoints.
-              </p>
-            </div>
-
-            <div
-              class="service-item border-b border-white/10 pb-8 hover:border-accent transition-colors duration-500"
-            >
-              <div class="flex justify-between items-start mb-4">
-                <h4 class="text-xl font-bold">Video Production & Editing</h4>
-                <span class="text-accent text-xs font-mono">03</span>
-              </div>
-              <p class="text-gray-500 leading-relaxed">
-                High-end post-production, motion graphics, and social media
-                content creation using <strong>Adobe Premiere Pro</strong> and
-                <strong>After Effects</strong>.
-              </p>
-            </div>
-
-            <div
-              class="service-item border-b border-white/10 pb-8 hover:border-accent transition-colors duration-500"
-            >
-              <div class="flex justify-between items-start mb-4">
-                <h4 class="text-xl font-bold">Digital Marketing & Ads</h4>
-                <span class="text-accent text-xs font-mono">04</span>
-              </div>
-              <p class="text-gray-500 leading-relaxed">
-                Strategic ad management across
-                <strong>Meta (Facebook/Instagram)</strong> and
-                <strong>Google Ads</strong> to drive conversion and ROI.
-              </p>
-            </div>
-
-            <div
-              class="service-item border-b border-white/10 pb-8 hover:border-accent transition-colors duration-500"
-            >
-              <div class="flex justify-between items-start mb-4">
-                <h4 class="text-xl font-bold">SEO & Growth Strategy</h4>
-                <span class="text-accent text-xs font-mono">05</span>
-              </div>
-              <p class="text-gray-500 leading-relaxed">
-                Technical SEO audits and on-page optimization to ensure your
-                brand ranks where it matters most.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         PRICING
-    ═══════════════════════════════════════════ -->
-    <section id="pricing" class="py-32 border-t border-white/5 bg-darker">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-20">
-          <h2
-            class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4"
-          >
-            Pricing
-          </h2>
-          <h3 class="text-4xl md:text-6xl font-bold tracking-tighter">
-            SIMPLE. <span class="italic text-gradient">TRANSPARENT.</span><br />
-            BUILT FOR <span class="text-accent">RESULTS.</span>
-          </h3>
-          <p class="text-gray-500 mt-6 max-w-2xl mx-auto">
-            Every project is customized based on your goals. No hourly billing —
-            only outcome-focused work designed to grow your brand.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          <!-- Design & Marketing -->
-          <div
-            class="border border-white/10 rounded-2xl p-10 bg-white/[0.02] hover:bg-white/[0.05] transition-all"
-          >
-            <h4 class="text-2xl font-bold mb-4">Design & Marketing</h4>
-            <p class="text-gray-500 text-sm mb-6">
-              Ongoing creative support, branding, and marketing execution for
-              growing businesses.
-            </p>
-            <div class="text-3xl font-black mb-2">From NPR 18,000 / mo</div>
-            <p class="text-xs text-amber-400/80 mb-6 font-medium">
-              ⚠ Monthly fee covers creative & management only. Ad spend
-              (Facebook Ads, Google Ads) is billed separately and paid directly
-              to the platform.
-            </p>
-            <ul class="space-y-4 text-gray-400 text-sm">
-              <li>✔ Social Media Creatives</li>
-              <li>✔ Branding & Visual Identity</li>
-              <li>✔ Ad Creatives (Meta / Google)</li>
-              <li>✔ Motion Graphics</li>
-              <li>✔ Strategy Support</li>
-            </ul>
-            <div class="mt-8 text-xs text-gray-600 uppercase tracking-widest">
-              Custom Plans Available
-            </div>
-          </div>
-
-          <!-- Web Development -->
-          <div
-            class="border border-accent rounded-2xl p-10 bg-accent/10 relative"
-          >
-            <h4 class="text-2xl font-bold mb-4">Web Development</h4>
-            <p class="text-gray-400 text-sm mb-6">
-              High-performance websites and web apps designed to convert and
-              scale.
-            </p>
-            <div class="text-3xl font-black mb-2">From NPR 45,000</div>
-            <p class="text-xs text-gray-500 mb-6 font-medium">
-              One-time project fee. Hosting & domain are charged separately and
-              billed to you directly.
-            </p>
-            <ul class="space-y-4 text-gray-300 text-sm">
-              <li>✔ Custom Website / Web App</li>
-              <li>✔ TALL Stack Development</li>
-              <li>✔ Filament Admin Dashboard</li>
-              <li>✔ SEO-Ready Architecture</li>
-              <li>✔ Fast & Responsive Design</li>
-              <li>✔ Performance Optimization</li>
-            </ul>
-            <div class="mt-8 text-xs text-accent uppercase tracking-widest">
-              Built for Conversion
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-16">
-          <p class="text-gray-500 max-w-xl mx-auto text-sm">
-            Final pricing depends on scope, complexity, and business goals.
-            Let's discuss what you need and build something that actually
-            performs.
-          </p>
-          <a
-            href="https://wa.me/9779816916916"
-            class="inline-block mt-8 px-10 py-4 bg-accent rounded-full font-bold hover:scale-105 transition-transform"
-          >
-            Get Custom Quote
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         FOOTER
-    ═══════════════════════════════════════════ -->
-    <footer class="py-32 border-t border-white/5 relative overflow-hidden">
-      <div
-        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-accent/5 blur-[120px] pointer-events-none"
-      ></div>
-      <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-        <h2
-          class="footer-title text-5xl md:text-8xl font-black tracking-tighter mb-10"
-        >
-          LET'S BUILD <span class="text-accent italic">IT.</span>
-        </h2>
-
-        <div class="flex flex-col items-center gap-8">
-          <a
-            href="https://wa.me/9779816916916"
-            target="_blank"
-            rel="noopener"
-            class="inline-block px-12 py-5 bg-white text-black rounded-full font-black hover:bg-accent hover:text-white transition-all tracking-widest uppercase shadow-2xl"
-          >
-            WhatsApp Me
-          </a>
-
-          <div
-            class="flex flex-wrap justify-center gap-6 md:gap-10 text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400"
-          >
-            <a
-              href="https://www.behance.net/bobstudioo"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-accent transition-colors"
-              >Behance</a
-            >
-            <a
-              href="http://instagram.com/bobstudio_official"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-accent transition-colors"
-              >Instagram</a
-            >
-            <a
-              href="https://www.facebook.com/bobstudioo/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-accent transition-colors"
-              >Facebook</a
-            >
-            <a
-              href="https://www.pinterest.com/bob_studio/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-accent transition-colors"
-              >Pinterest</a
-            >
-            <a
-              href="https://github.com/nunamrai/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-accent transition-colors"
-              >Github</a
-            >
           </div>
         </div>
 
         <div
-          class="mt-32 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase"
+          class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-600"
         >
-          <!-- Dynamic year -->
+          <p>© <span id="year"></span> Nunam Rai. All rights reserved.</p>
           <p>
-            &copy; <span id="footer-year"></span> NUNAM RAI — CRAFTING DIGITAL
-            POETRY
+            Designed & developed by
+            <a
+              href="https://nunamrai.github.io/"
+              class="text-gray-300 hover:text-purple-400 transition"
+            >
+              Nunam Rai </a
+            >.
           </p>
-          <div class="flex items-center space-x-2 mt-6 md:mt-0">
-            <span
-              class="w-2 h-2 rounded-full bg-green-500 animate-pulse"
-            ></span>
-            <span>SYSTEMS ONLINE</span>
-          </div>
         </div>
       </div>
     </footer>
 
-    <!-- ═══════════════════════════════════════════
-         SCRIPTS
-    ═══════════════════════════════════════════ -->
+    <!-- LIBRARIES -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- INTERACTIONS -->
     <script>
-      // ── Dynamic footer year ──
-      document.getElementById("footer-year").textContent =
-        new Date().getFullYear();
+      document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.getElementById("navbar");
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-      // ── Mobile menu toggle ──
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
+        const slider = document.getElementById("projectSlider");
+        const progress = document.getElementById("sliderProgress");
+        const prevButton = document.getElementById("projectPrev");
+        const nextButton = document.getElementById("projectNext");
 
-      hamburger.addEventListener("click", () => {
-        const isOpen = !mobileMenu.classList.contains("hidden");
-        if (isOpen) {
-          mobileMenu.classList.add("hidden");
-          hamburger.classList.remove("ham-open");
-        } else {
-          mobileMenu.classList.remove("hidden");
-          hamburger.classList.add("ham-open");
+        // Footer year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Navbar scroll state
+        const updateNavbar = () => {
+          navbar.classList.toggle("scrolled", window.scrollY > 30);
+        };
+
+        updateNavbar();
+        window.addEventListener("scroll", updateNavbar, { passive: true });
+
+        // Mobile menu
+        menuToggle.addEventListener("click", () => {
+          const isOpen = mobileMenu.classList.toggle("open");
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+          menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰";
+          });
+        });
+
+        // Pending projects are not clickable yet
+        document.querySelectorAll(".project-pending").forEach((card) => {
+          card.addEventListener("click", (event) => event.preventDefault());
+        });
+
+        // Project slider
+        const getScrollAmount = () => {
+          const card = slider.querySelector(".project-card");
+          const gap = parseFloat(getComputedStyle(slider).gap) || 22;
+          return card ? card.getBoundingClientRect().width + gap : 320;
+        };
+
+        const updateProgress = () => {
+          const maxScroll = slider.scrollWidth - slider.clientWidth;
+          const percentage =
+            maxScroll > 0 ? (slider.scrollLeft / maxScroll) * 100 : 100;
+
+          progress.style.width = percentage + "%";
+        };
+
+        prevButton.addEventListener("click", () => {
+          const amount = getScrollAmount();
+          const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+          if (slider.scrollLeft <= 2) {
+            slider.scrollTo({ left: maxScroll, behavior: "smooth" });
+          } else {
+            slider.scrollBy({ left: -amount, behavior: "smooth" });
+          }
+        });
+
+        nextButton.addEventListener("click", () => {
+          const amount = getScrollAmount();
+          const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+          if (slider.scrollLeft >= maxScroll - 5) {
+            slider.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            slider.scrollBy({ left: amount, behavior: "smooth" });
+          }
+        });
+
+        slider.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+        updateProgress();
+
+        // Mouse dragging
+        let isDragging = false;
+        let startX = 0;
+        let startScroll = 0;
+        let moved = false;
+
+        slider.addEventListener("pointerdown", (event) => {
+          if (event.pointerType === "touch" || event.button !== 0) return;
+
+          isDragging = true;
+          moved = false;
+          startX = event.clientX;
+          startScroll = slider.scrollLeft;
+        });
+
+        window.addEventListener("pointermove", (event) => {
+          if (!isDragging) return;
+
+          const distance = event.clientX - startX;
+
+          if (Math.abs(distance) > 5) {
+            moved = true;
+            slider.classList.add("dragging");
+            slider.scrollLeft = startScroll - distance;
+          }
+        });
+
+        window.addEventListener("pointerup", () => {
+          if (!isDragging) return;
+
+          isDragging = false;
+          slider.classList.remove("dragging");
+
+          if (moved) {
+            slider.dataset.dragged = "true";
+            setTimeout(() => delete slider.dataset.dragged, 100);
+          }
+        });
+
+        slider.addEventListener(
+          "click",
+          (event) => {
+            if (slider.dataset.dragged === "true") {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+          },
+          true,
+        );
+
+        // Cursor glow
+        const cursorGlow = document.getElementById("cursorGlow");
+
+        if (window.matchMedia("(pointer: fine)").matches) {
+          let mouseX = -300;
+          let mouseY = -300;
+          let glowX = mouseX;
+          let glowY = mouseY;
+
+          window.addEventListener(
+            "mousemove",
+            (event) => {
+              mouseX = event.clientX;
+              mouseY = event.clientY;
+            },
+            { passive: true },
+          );
+
+          const animateGlow = () => {
+            glowX += (mouseX - glowX) * 0.12;
+            glowY += (mouseY - glowY) * 0.12;
+
+            cursorGlow.style.transform = `translate(${glowX - 130}px, ${glowY - 130}px)`;
+
+            requestAnimationFrame(animateGlow);
+          };
+
+          animateGlow();
         }
-      });
 
-      // Close mobile menu when a nav link is clicked
-      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-          hamburger.classList.remove("ham-open");
-        });
-      });
+        // Scroll reveal
+        const revealElements = document.querySelectorAll(".reveal");
 
-      // ── Smooth Scroll (Lenis) ──
-      const lenis = new Lenis();
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            {
+              threshold: 0.12,
+              rootMargin: "0px 0px -30px 0px",
+            },
+          );
 
-      // ── GSAP Animations ──
-      gsap.registerPlugin(ScrollTrigger);
+          revealElements.forEach((element) => observer.observe(element));
+        } else {
+          revealElements.forEach((element) => element.classList.add("visible"));
+        }
 
-      gsap.from(".hero-title, .hero-p, .hero-btns", {
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: "power4.out",
-      });
+        // Lenis smooth scrolling
+        if (window.Lenis) {
+          const lenis = new Lenis({
+            duration: 1.1,
+            smoothWheel: true,
+            wheelMultiplier: 0.9,
+            touchMultiplier: 1.5,
+          });
 
-      gsap.from("#about h3, #about p", {
-        scrollTrigger: { trigger: "#about", start: "top 80%" },
-        y: 40,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 1,
-      });
+          function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+          }
 
-      gsap.utils.toArray(".project-card").forEach((card) => {
-        gsap.from(card, {
-          scrollTrigger: { trigger: card, start: "top 90%" },
-          y: 50,
-          opacity: 0,
-          duration: 1,
-        });
-      });
+          requestAnimationFrame(raf);
 
-      gsap.from(".service-item", {
-        scrollTrigger: { trigger: "#services", start: "top 70%" },
-        x: -40,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1,
+          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", (event) => {
+              const targetId = anchor.getAttribute("href");
+              if (!targetId || targetId === "#") return;
+
+              const target = document.querySelector(targetId);
+              if (!target) return;
+
+              event.preventDefault();
+
+              lenis.scrollTo(target, {
+                offset: -75,
+                duration: 1.1,
+              });
+            });
+          });
+        }
+
+        // GSAP heading entrance
+        if (window.gsap && window.ScrollTrigger) {
+          gsap.registerPlugin(ScrollTrigger);
+
+          gsap.utils.toArray(".section-heading").forEach((heading) => {
+            gsap.from(heading, {
+              y: 25,
+              opacity: 0,
+              duration: 0.8,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: heading,
+                start: "top 88%",
+                once: true,
+              },
+            });
+          });
+        }
       });
     </script>
   </body>
